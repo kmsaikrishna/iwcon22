@@ -1,5 +1,5 @@
 jQuery(document).ready(function() {
     $(function() {
-        $('#defaultCountdown').countdown({ until: new Date(2022, 01, 26, 6) }); // year, month, date, hour
+        $('#defaultCountdown').countdown({ until: new Date(2022, 01, 27, -5) }); // year, month, date, hour
     });
 });
