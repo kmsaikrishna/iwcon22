@@ -1,1274 +1,1755 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
-    <meta charset="utf-8">
-    <title>IWCon2022 - Infosec WriteUps Virtual Conference</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Infosec writeup is organising the Grand Virtual Conference and Networking Event. Organized by the Internet's largest & most loved Infosec Publication.">
-    <meta name="keywords" content="">
-    <meta name="author" content="Infosecwriteups">
-    <meta property='og:image' content='https://iwcon.live/images-event/logoog.jpg' />
-    <meta property='og:description' content="Infosec writeup is organizing the Grand Virtual Conference and Networking Event. Organized by the Internet's largest & most loved Infosec Publication." />
-    <link rel="icon" type="image/x-icon" href="images-event/favicon.ico">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>IWCon2022</title>
+<meta name="author" content="iThemesLab">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" rel="boostrap">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap" rel="stylesheet"> 
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-LWS4D5Q7RB"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
-
-        gtag('config', 'G-LWS4D5Q7RB');
-    </script> -->
-
-    <!-- Start of HubSpot Embed Code -->
-    <script type="text/javascript" id="hs-script-loader" async defer src="//js-na1.hs-scripts.com/21324114.js"></script>
-    <!--  End of HubSpot Embed Code -->
-
-    <!--[if lt IE 9]> -->
-    <script src="js/html5shi~v.js"></script>
-    <!-- [endif] -->
+<link rel="shortcut icon" href="assets/favicon/favicon.ico">
+<!-- <link rel="icon" type="image/x-icon" href="images-event/favicon.ico"> -->
+<link rel="apple-touch-icon" href="assets/favicon/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="72x72" href="assets/favicon/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="114x114" href="assets/favicon/apple-icon-114x114.png">
+<link rel="stylesheet" media="mediatype and|not|only (expressions)" href="print.css"> 
+<link rel="apple-touch-icon" sizes="144x144" href="assets/favicon/apple-icon-144x144.png">
 
 
-    <!-- CSS Files
-    ================================================== -->
-    <link rel="stylesheet" href="css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="css/jpreloader.css" type="text/css">
-    <link rel="stylesheet" href="css/animate.css" type="text/css">
-    <link rel="stylesheet" href="css/plugin.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.carousel.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.theme.css" type="text/css">
-    <link rel="stylesheet" href="css/owl.transitions.css" type="text/css">
-    <link rel="stylesheet" href="css/magnific-popup.css" type="text/css">
-    <link rel="stylesheet" href="css/jquery.countdown.css" type="text/css">
-    <link rel="stylesheet" href="css/style.css" type="text/css">
-    <link rel="stylesheet" href="css/twentytwenty.css" type="text/css">
+<link rel="stylesheet" href="assets/css/vendor/bootstrap.min.css">
 
-    <!-- custom background -->
-    <link rel="stylesheet" href="css/bg.css" type="text/css">
+<link rel="stylesheet" href="assets/css/vendor/font-awesome.min.css">
 
-    <!-- color scheme -->
-    <link rel="stylesheet" href="css/colors/magenta.css" type="text/css" id="colors">
-    <link rel="stylesheet" href="css/color.css" type="text/css">
+<link rel="stylesheet" href="assets/css/vendor/flaticon.css">
 
-    <!-- load fonts -->
-    <link rel="stylesheet" href="fonts/font-awesome/css/font-awesome.css" type="text/css">
-    <link rel="stylesheet" href="fonts/elegant_font/HTML_CSS/style.css" type="text/css">
-    <link rel="stylesheet" href="fonts/et-line-font/style.css" type="text/css">
+<link rel="stylesheet" href="assets/css/vendor/owl.carousel.min.css">
 
-    <!-- custom font -->
-    <link rel="stylesheet" href="css/font-style.css" type="text/css">
+<link rel="stylesheet" href="assets/css/vendor/owl.theme.default.min.css">
+
+<link rel="stylesheet" href="assets/css/vendor/animate.css">
+
+<link rel="stylesheet" href="assets/css/vendor/jquery-ui.min.css">
+
+<link rel="stylesheet" href="assets/css/vendor/lightbox.css">
+
+<link rel="stylesheet" href="assets/css/style.css">
+
+<link rel="stylesheet" href="assets/css/responsive.css">
+
+<script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
+<!--[if lt IE 9]>
+        <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 </head>
-
-<body id="homepage">
-
-    <div id="wrapper">
-
-        <!-- header begin -->
-        <header class="transparent">
-            <div class="info">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12" style="top: 50px;">
-                            <div class="spacer-single"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <!-- logo begin -->
-                        <div id="logo">
-                            <a href="index.html">
-                                <img class="logo" src="images-event/logo.png" alt="">
-                            </a>
-                        </div>
-                        <!-- logo close -->
-
-                        <!-- small button begin -->
-                        <span id="menu-btn"></span>
-                        <!-- small button close -->
-
-                        <div class="header-extra">
-                            <div class="v-center">
-                                <span id="b-menu">
-                                    <span></span>
-                                <span></span>
-                                <span></span>
-                                </span>
-                            </div>
-                        </div>
-
-                        <!-- mainmenu begin -->
-                        <ul id="mainmenu" class="ms-2">
-                            <li><a href="#section-hero">Home<span></span></a></li>
-                            <li><a href="#section-about">About<span></span></a></li>
-                            <li><a href="#section-speakers">Speakers<span></span></a></li>
-                            <li><a href="#section-schedule">Schedule<span></span></a></li>
-                            <li><a href="#section-ticket">Ticket<span></span></a></li>
-                            <li><a href="#section-sponsors">Sponsors<span></span></a></li>
-                            <li><a href="https://razorpay.com/payment-button/pl_IkurresccCErYp/view/?utm_source=payment_button&utm_medium=button&utm_campaign=payment_button">Register<span></span></a></li>
-                        </ul>
-                        <!-- mainmenu close -->
-                    </div>
-
-                </div>
-            </div>
-        </header>
-        <!-- header close -->
-
-
-        <!-- content begin -->
-        <div id="content" class="no-bottom no-top">
-
-            <!-- parallax section -->
-            <section id="section-hero" class="full-height text-light" data-bgimage="url(imagues-event/bg/7.jpg) fixed top center" data-stellar-background-ratio=".2">
-                <div id="particles-js"></div>
-                <div class="center-y text-center">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-12" style="top:50px">
-                                <div class="spacer-single"></div>
-                                <h1 class="title-3">
-                                    Infosec WriteUps'<br> Conference <span class="id-color">2022</span>
-                                </h1>
-                                <p></p>
-                                <p>Network With World’s Best Infosec Professionals. Find How Cybersecurity Pros Achieved Success. Add New Skills to Your CV.<span class="id-color"> All In Just $5.</span> </p>
-                                <p>Join the Grand Virtual Conference and Networking Event. Organized by the Internet's
-                                    <a class="id-color" href="https://infosecwriteups.com/">largest & most loved Infosec Publication.</a>
-                                </p>
-                                <div class="spacer-single"></div>
-                                <div class="d-lg-flex justify-content-center">
-                                    <div class="h6 padding10 pt0 pb0"><i class="i_h3 fa fa-calendar-check-o id-color"></i>February 26th & 27th</div>
-                                    <div class="h6 padding10 pt0 pb0"><i class="i_h3 fa fa-user id-color"></i>15 + Awsome Speakers</div>
-                                    <div class="h6 padding10 pt0 pb0"><i class="i_h3 fa fa-map-marker id-color"></i>Virtual Conference</div>
-                                </div>
-                                <div class="spacer-single"></div>
-
-                                <!-- <form>
-                                    <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_IkurresccCErYp" async>
-                                    </script>
-                                </form> -->
-                                <a href="https://razorpay.com/payment-button/pl_IkurresccCErYp/view/?utm_source=payment_button&utm_medium=button&utm_campaign=payment_button" class="btn-custom text-white scroll-to">Save your seat...</a>
-                                <div class="spacer-double"></div>
-
-                                <div class="spacer-double"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- section close -->
-
-            <section id="section-about" data-bgimage="url(images-event/bg/1.png) fixed no-repeat">
-                <div class="wm wm-border dark wow fadeInDown">IWCon</div>
-                <div class="container">
-                    <div class="row align-items-center">
-
-                        <div class="col-lg-6 wow fadeInLeft" data-wow-delay="0s">
-                            <h2>Network and Learn From World’s
-                                <br>Best Infosec Professionals</h2>
-                            <p>
-                                Most Infosec conferences only revolve around Technicalities. But no one really talks about the emotional struggles of living in the Infosec world. No one shares their success blueprint of how exactly they went from 0 to great heights. And how you can
-                                do the same.
-                                <br><br> We attempt to fill this gap.
-                                <br><br> At IWCon, you’ll learn not just technical, but the human angle of being in Infosec.
-                                <br><br> Our speakers from around the world will share the behind-the-scenes of their journey so you can add new amazing skills and mindset shifts to your arsenal.
-                                <br><br>
-                            </p>
-
-                            <div class="spacer10"></div>
-                            <a href="https://razorpay.com/payment-button/pl_IkurresccCErYp/view/?utm_source=payment_button&utm_medium=button&utm_campaign=payment_button" class="btn-custom font-weight-bold text-white sm-mb-30 scroll-to">Register</a>
-                        </div>
-
-                        <div class="col-lg-6 mb-sm-30 text-center wow fadeInRight">
-                            <!-- <div class="de-images">
-                                <img class="di-small wow fadeIn" src="images-event/misc/2.jpg" alt="" />
-                                <img class="di-small-2" src="images-event/misc/3.jpg" alt="" />
-                                <img class="img-fluid wow fadeInRight" data-wow-delay=".25s" src="images-event/misc/1.jpg" alt="" />
-                            </div> -->
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-
-            <!-- Features begin -->
-            <section id="section-features">
-                <div class="wm wm-border dark wow fadeInDown ">features</div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 offset-md-3 text-center wow fadeInUp">
-                            <h1>Why You Should Join The Event?</h1>
-                            <div class="separator"><span><i class="fa fa-square"></i></span></div>
-                            <div class="spacer-single"></div>
-                        </div>
-
-
-                        <div class="col-lg-4 wow fadeIn" data-wow-delay="0s">
-                            <div class="box-number square">
-                                <i class="bg-color hover-color-2 fa fa-microphone text-light"></i>
-                                <div class="text">
-                                    <h3><span>EXPERT TALKS</span></h3>
-                                    <p>Leading experts and industries top practitioners from around the globe to share their latest security based ideas and techniques.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 wow fadeIn" data-wow-delay=".25s">
-                            <div class="box-number square">
-                                <i class="bg-color hover-color-2 fa fa-lightbulb-o text-light"></i>
-                                <div class="text">
-                                    <h3><span>LEARN</span></h3>
-                                    <p>Learn from the journeys our experts share and how they shaped their success, so you can do it too.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 wow fadeIn" data-wow-delay=".5s">
-                            <div class="box-number square">
-                                <i class="bg-color hover-color-2 fa fa-sitemap text-light"></i>
-                                <div class="text">
-                                    <h3><span>INTERACT</span></h3>
-                                    <p>Keynotes and Hands-on workshops so you can ask your questions live and get all your doubts cleared.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="spacer-single sm-hide"></div>
-
-                        <div class="col-lg-4 wow fadeIn" data-wow-delay=".75s">
-                            <div class="box-number square">
-                                <i class="bg-color hover-color-2 fa fa-building text-light"></i>
-                                <div class="text">
-                                    <h3><span>VIRTUAL VENUE</span></h3>
-                                    <p>Due to ongoing pandemic, we are focusing on virtual conference to make sure beginners and professional security geeks be up-to date with the latest security technologies.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 wow fadeIn" data-wow-delay="1s">
-                            <div class="box-number square">
-                                <i class="bg-color hover-color-2  fa fa-users text-light"></i>
-                                <div class="text">
-                                    <h3><span>NETWORK</span></h3>
-                                    <p>Network with other Infosec professionals with similar interests, so you can make powerful new connections and collaborations. You can also choose to have private talks with any fellow attendee you like.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 wow fadeIn" data-wow-delay="1.25s">
-                            <div class="box-number square">
-                                <i class="bg-color hover-color-2 fa fa-mortar-board text-light"></i>
-                                <div class="text">
-                                    <h3><span>SOAR</span></h3>
-                                    <p>Boost your knowledge, reinforce your mindset, and add a few new skills to your CV. Take home new ways to tackle problems and apply in your journey so you can soar to the top.</p>
-                                </div>
-                            </div>
-                        </div>
-
-
-                    </div>
-                </div>
-            </section>
-            <!-- features close -->
-
-            <!-- Speaker begin -->
-            <section id="section-speakers" class="text-light" data-bgimage="url(images-event/bg/1.1.png) fixed top center" data-stellar-background-ratio=".2">
-                <div class="wm wm-border dark wow fadeInDown">speakers</div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 offset-md-3 text-center wow fadeInUp">
-                            <h1>Our Speakers</h1>
-                            <div class="separator"><span><i class="fa fa-square"></i></span></div>
-                            <div class="spacer-single"></div>
-                        </div>
-                        <div class="clearfix"></div>
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
-                            <!-- team member -->
-                            <div class="de-team-list">
-                                <div class="team-pic">
-                                    <img src="images-event/team/1.png" class="img-responsive" alt="" />
-                                </div>
-                                <div class="team-desc">
-                                    <h3>Louis Nyffenegger</h3>
-                                    <p class="lead">Founder/CEO/Trainer/Researcher @PentesterLab</p>
-                                    <div class="small-border"></div>
-                                    <div class="social">
-                                        <a href="https://twitter.com/snyff" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- team close -->
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
-                            <!-- team member -->
-                            <div class="de-team-list">
-                                <div class="team-pic">
-                                    <img src="images-event/team/2.png" class="img-responsive" alt="" />
-                                </div>
-                                <div class="team-desc">
-                                    <h3>Zseano</h3>
-                                    <p class="lead">Creator of BugBountyHunter</p>
-                                    <div class="small-border"></div>
-                                    <div class="social">
-                                        <a href="https://twitter.com/zseano" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- team close -->
-                        </div>
-
-
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
-                            <!-- team member -->
-                            <div class="de-team-list">
-                                <div class="team-pic">
-                                    <img src="images-event/team/3.jpg" class="img-responsive" alt="" />
-                                </div>
-                                <div class="team-desc">
-                                    <h3>Tanya Janca</h3>
-                                    <p class="lead">Founder of We Hack Purple.</p>
-                                    <div class="small-border"></div>
-                                    <div class="social">
-                                        <a href="https://twitter.com/shehackspurple" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- team close -->
-                        </div>
-
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
-                            <!-- team member -->
-                            <div class="de-team-list">
-                                <div class="team-pic">
-                                    <img src="images-event/team/15.png" class="img-responsive" alt="" />
-                                </div>
-                                <div class="team-desc">
-                                    <h3>Hussein Daher</h3>
-                                    <p class="lead">Hacker</p>
-                                    <div class="small-border"></div>
-                                    <div class="social">
-                                        <a href="https://twitter.com/HusseiN98D" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- team close -->
-                        </div>
-
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
-                            <!-- team member -->
-                            <div class="de-team-list">
-                                <div class="team-pic">
-                                    <img src="images-event/team/4.jpg" class="img-responsive" alt="" />
-                                </div>
-                                <div class="team-desc">
-                                    <h3>Jun Kokatsu</h3>
-                                    <p class="lead">Security Engineer @ Microsoft</p>
-                                    <div class="small-border"></div>
-                                    <div class="social">
-                                        <a href="https://twitter.com/shhnjk" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- team close -->
-                        </div>
-
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
-                            <!-- team member -->
-                            <div class="de-team-list">
-                                <div class="team-pic">
-                                    <img src="images-event/team/5.jpg" class="img-responsive" alt="" />
-                                </div>
-                                <div class="team-desc">
-                                    <h3>Mehedi Hassan Remon</h3>
-                                    <p class="lead">Brand Ambassador@Hacker0x01</p>
-                                    <div class="small-border"></div>
-                                    <div class="social">
-                                        <a href="https://twitter.com/remonsec" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- team close -->
-                        </div>
-
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
-                            <!-- team member -->
-                            <div class="de-team-list">
-                                <div class="team-pic">
-                                    <img src="images-event/team/6.jpg" class="img-responsive" alt="" />
-                                </div>
-                                <div class="team-desc">
-                                    <h3>Jessica Haworth</h3>
-                                    <p class="lead">Cybersecurity journalist for The Daily Swig</p>
-                                    <div class="small-border"></div>
-                                    <div class="social">
-                                        <a href="https://twitter.com/jesscahaworth" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- team close -->
-                        </div>
-
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
-                            <!-- team member -->
-                            <div class="de-team-list">
-                                <div class="team-pic">
-                                    <img src="images-event/team/13.jpg" class="img-responsive" alt="" />
-                                </div>
-                                <div class="team-desc">
-                                    <h3>Roshan Piyush</h3>
-                                    <p class="lead">Security Research Engineer @ Traceable AI </p>
-                                    <div class="small-border"></div>
-                                    <div class="social">
-                                        <a href="https://www.linkedin.com/in/roshanpiyush/" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- team close -->
-                        </div>
-
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
-                            <!-- team member -->
-                            <div class="de-team-list">
-                                <div class="team-pic">
-                                    <img src="images-event/team/7.png" class="img-responsive" alt="" />
-                                </div>
-                                <div class="team-desc">
-                                    <h3>Emile Fugulin</h3>
-                                    <p class="lead"> Co-founder of Caido </p>
-                                    <div class="small-border"></div>
-                                    <div class="social">
-                                        <a href="https://twitter.com/TheSytten/" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- team close -->
-                        </div>
-
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
-                            <!-- team member -->
-                            <div class="de-team-list">
-                                <div class="team-pic">
-                                    <img src="images-event/team/12.jpg" class="img-responsive" alt="" />
-                                </div>
-                                <div class="team-desc">
-                                    <h3>Vandana Verma</h3>
-                                    <p class="lead">Chairman, Board of Directors, OWASP</p>
-                                    <div class="small-border"></div>
-                                    <div class="social">
-                                        <a href="https://www.linkedin.com/in/vandana-verma/" target="_blank"><i class="fa fa-linkedin fa-lg"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- team close -->
-                        </div>
-
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
-                            <!-- team member -->
-                            <div class="de-team-list">
-                                <div class="team-pic">
-                                    <img src="images-event/team/8.jpg" class="img-responsive" alt="" />
-                                </div>
-                                <div class="team-desc">
-                                    <h3>Harsh Bothra </h3>
-                                    <p class="lead">Learn365|Cobalt Core Team Lead & Pentester</p>
-                                    <div class="small-border"></div>
-                                    <div class="social">
-                                        <a href="https://twitter.com/harshbothra" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- team close -->
-                        </div>
-
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
-                            <!-- team member -->
-                            <div class="de-team-list">
-                                <div class="team-pic">
-                                    <img src="images-event/team/14.png" class="img-responsive" alt="" />
-                                </div>
-                                <div class="team-desc">
-                                    <h3>Duncan Townsend</h3>
-                                    <p class="lead">CTO and cofounder of Immunefi</p>
-                                    <div class="small-border"></div>
-                                    <div class="social">
-                                        <a href="https://twitter.com/duncancmt" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- team close -->
-                        </div>
-
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
-                            <!-- team member -->
-                            <div class="de-team-list">
-                                <div class="team-pic">
-                                    <img src="images-event/team/16.png" class="img-responsive" alt="" />
-                                </div>
-                                <div class="team-desc">
-                                    <h3>Dhiyaneshwaran DK</h3>
-                                    <p class="lead">Pentester and Bug Bounty Hunter</p>
-                                    <div class="small-border"></div>
-                                    <div class="social">
-                                        <a href="https://twitter.com/dhiyaneshdk" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- team close -->
-                        </div>
-
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
-                            <!-- team member -->
-                            <div class="de-team-list">
-                                <div class="team-pic">
-                                    <img src="images-event/team/9.jpg" class="img-responsive" alt="" />
-                                </div>
-                                <div class="team-desc">
-                                    <h3>Aseem Shrey</h3>
-                                    <p class="lead">Security Engineer @gojektech, CTF player NULLKrypt3rsr</p>
-                                    <div class="small-border"></div>
-                                    <div class="social">
-                                        <a href="https://twitter.com/AseemShrey" target="_blank"><i class="fa fa-twitter fa-lg"></i></a>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- team close -->
-                        </div>
-
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
-                            <!-- team member -->
-                            <div class="de-team-list">
-                                <div class="team-pic">
-                                    <img src="images-event/team/10.jpg" class="img-responsive" alt="" />
-                                </div>
-                                <div class="team-desc">
-                                    <h3>Nithin R</h3>
-                                    <p class="lead">Cybersecurity researcher</p>
-                                    <div class="small-border"></div>
-                                    <div class="social">
-                                        <a href="https://twitter.com/thebinarybot"><i class="fa fa-twitter fa-lg"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- team close -->
-                        </div>
-
-                        <div class="col-xl-3 col-lg-4 col-sm-6 mb30 wow fadeInUp">
-                            <!-- team member -->
-                            <div class="de-team-list">
-                                <div class="team-pic">
-                                    <img src="images-event/team/11.jpg" class="img-responsive" alt="" />
-                                </div>
-                                <div class="team-desc">
-                                    <h3>Anuragh S R</h3>
-                                    <p class="lead">CyberSecurity Consultant@The SecOps Groupr</p>
-                                    <div class="small-border"></div>
-                                    <div class="social">
-                                        <a href="https://twitter.com/cyph3r_asr"><i class="fa fa-twitter fa-lg"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- team close -->
-                        </div>
-                        <div class="clearfix"></div>
-
-                    </div>
-                </div>
-            </section>
-            <!-- Speaker close -->
-
-
-            <!-- Schedule begin -->
-            <section id="section-schedule" aria-label="section-services-tab" data-bgimage="url(images-event/bg/2.png) fixed center no-repeat">
-                <div class="wm wm-border dark wow fadeInDown ">schedule</div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 offset-md-3 text-center wow fadeInUp">
-                            <h1>Event Schedule</h1>
-                            <div class="separator"><span><i class="fa fa-square"></i></span></div>
-                            <div class="spacer-single"></div>
-                        </div>
-
-                        <div class="col-md-12 wow fadeInUp">
-                            <div class="de_tab tab_style_4 text-center">
-                                <ul class="de_nav de_nav_dark">
-                                    <li class="active" data-link="#section-services-tab">
-                                        <h3>Day <span>01</span></h3>
-                                        <h4>February 26, 2022</h4>
-                                    </li>
-                                    <li data-link="#section-services-tab">
-                                        <h3>Day <span>02</span></h3>
-                                        <h4>February 27, 2022</h4>
-                                    </li>
-                                </ul>
-                                <div class="de_tab_content text-left">
-                                    <div id="tab1" class="tab_single_content dark">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <!-- two parallel schedule -->
-                                                <!-- Day1 -->
-                                                <!-- 7:00-7:30 -->
-                                                <div class="row">
-                                                    <div class="col-md-12 text-center">
-                                                        <div class="sc-time">07:00 - 07:30 PM IST</div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="schedule-listing">
-                                                            <div class="schedule-item">
-                                                                <div class="sc-info">
-                                                                    <h3>Starting with Android Static Analysis</h3>
-                                                                    <p> You will get better understanding of Android static analysis</p>
-                                                                    <span> Senior Security Engineer @ Gojek</span>
-                                                                </div>
-                                                                <div class="sc-name">
-                                                                    <div class="sc-pic">
-                                                                        <img src="images-event/team/1.1.jpg" class="img-circle" alt="">
-                                                                    </div>
-                                                                    <h4>Aseem Shrey</h4>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="schedule-listing">
-                                                            <div class="schedule-item">
-                                                                <div class="sc-info">
-                                                                    <h3>Beyond the Twitterverse </h3>
-                                                                    <p>How to increase visibility of your research by working with the media</p>
-                                                                    <span>Cybersecurity journalist @ The Daily Swig</span>
-                                                                </div>
-                                                                <div class="sc-name">
-                                                                    <div class="sc-pic">
-                                                                        <img src="images-event/team/1.2.jpg" class="img-circle" alt="">
-                                                                    </div>
-                                                                    <h4>Jessica Haworth</h4>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- 8:00-8:30 -->
-                                                <div class="row">
-                                                    <div class="col-md-12 text-center">
-                                                        <div class="sc-time">8:00 - 8:30 PM IST</div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="schedule-listing">
-                                                            <div class="schedule-item">
-                                                                <div class="sc-info">
-                                                                    <h3>Dissecting techniques to shoot API </h3>
-                                                                    <p> Build a compound model to deeply understand correlations in API patterns and data flows uncovering API vulnerabilities that may escape your threat model.</p>
-                                                                    <span>Security Research Engineer@Traceable AI </span>
-                                                                </div>
-                                                                <div class="sc-name">
-                                                                    <div class="sc-pic">
-                                                                        <img src="images-event/team/13.2.jpg" class="img-circle" alt="">
-                                                                    </div>
-                                                                    <h4>Roshan Piyush</h4>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="schedule-listing">
-                                                            <div class="schedule-item">
-                                                                <div class="sc-info">
-                                                                    <h3>Building hacker tooling</h3>
-                                                                    <p>Insight into the first year of Caido</p>
-                                                                    <span> Co-founder of Caido</span>
-                                                                </div>
-                                                                <div class="sc-name">
-                                                                    <div class="sc-pic">
-                                                                        <img src="images-event/team/2.2.png" class="img-circle" alt="">
-                                                                    </div>
-                                                                    <h4>Emile Fugulin</h4>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- 9:00 -9:30 -->
-                                                <div class="row">
-                                                    <div class="col-md-12 text-center">
-                                                        <div class="sc-time">9:00 -9:30 PM IST</div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="schedule-listing">
-                                                            <div class="schedule-item">
-                                                                <div class="sc-info">
-                                                                    <h3>Journey of getting started in Bug Bounty</h3>
-                                                                    <p> In the session you will understand on how to skill up your levels in hacking</p>
-                                                                    <span>Brand Ambassador @Hacker0x01</span>
-                                                                </div>
-                                                                <div class="sc-name">
-                                                                    <div class="sc-pic">
-                                                                        <img src="images-event/team/3.1.jpg" class="img-circle" alt="">
-                                                                    </div>
-                                                                    <h4>Hassan Remon</h4>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="schedule-listing">
-                                                            <div class="schedule-item">
-                                                                <div class="sc-info">
-                                                                    <h3>Biologist to Security consultant</h3>
-                                                                    <p>Journey of a Biologist who tranformed himself into a security consultant</p>
-                                                                    <span>CyberSecurity Consultant @ The SecOps Group</span>
-                                                                </div>
-                                                                <div class="sc-name">
-                                                                    <div class="sc-pic">
-                                                                        <img src="images-event/team/3.2.png" class="img-circle" alt="">
-                                                                    </div>
-                                                                    <h4>Anugrah SR</h4>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- 10:00-10:30 -->
-                                                <div class="row">
-                                                    <div class="col-md-12 text-center">
-                                                        <div class="sc-time">10:00 - 10:30 PM IST</div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="schedule-listing">
-                                                            <div class="schedule-item">
-                                                                <div class="sc-info">
-                                                                    <h3>#Learn365 Challenge</h3>
-                                                                    <p> One Year Continuous Learning Journey through learn365 challenge</p>
-                                                                    <span>Cobalt Core Team Lead & Pentester</span>
-                                                                </div>
-                                                                <div class="sc-name">
-                                                                    <div class="sc-pic">
-                                                                        <img src="images-event/team/4.1.jpg" class="img-circle" alt="">
-                                                                    </div>
-                                                                    <h4>Harsh Bothra</h4>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="schedule-listing">
-                                                            <div class="schedule-item">
-                                                                <div class="sc-info">
-                                                                    <h3>New vulnerabilities and how to tackle them</h3>
-                                                                    <p>The new age strategies in handling latest vulnerabilities </p>
-                                                                    <span>Chairman,Board of Directors @ OWASP</span>
-                                                                </div>
-                                                                <div class="sc-name">
-                                                                    <div class="sc-pic">
-                                                                        <img src="images-event/team/12.2.jpg" class="img-circle" alt="">
-                                                                    </div>
-                                                                    <h4>Vandana Verma</h4>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div id="tab2" class="tab_single_content dark">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <!-- Day2 -->
-                                                <!-- 7:00-7:30 -->
-                                                <div class="row">
-                                                    <div class="col-md-12 text-center">
-                                                        <div class="sc-time">07:00 - 07:30 PM IST</div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="schedule-listing">
-                                                            <div class="schedule-item">
-                                                                <div class="sc-info">
-                                                                    <h3>Finding bugs on NFT websites for fun & profit</h3>
-                                                                    <p> A better way to explore vulnerabilities for fun over NFT websites</p>
-                                                                    <span>Creator of BugBountyHunter</span>
-                                                                </div>
-                                                                <div class="sc-name">
-                                                                    <div class="sc-pic">
-                                                                        <img src="images-event/team/6.1.png" class="img-circle" alt="">
-                                                                    </div>
-                                                                    <h4>Zseano</h4>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="schedule-listing">
-                                                            <div class="schedule-item">
-                                                                <div class="sc-info">
-                                                                    <h3>Mindset After 7 years of Bug Bounty</h3>
-                                                                    <p>How , what will be the mindset after 7 years into bugbounty</p>
-                                                                    <span>Passionate Hacker breaking codes for more than 10 years</span>
-                                                                </div>
-                                                                <div class="sc-name">
-                                                                    <div class="sc-pic">
-                                                                        <img src="images-event/team/15.2.png" class="img-circle" alt="">
-                                                                    </div>
-                                                                    <h4>Hussein Daher</h4>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- 8:00-8:30 -->
-                                                <div class="row">
-                                                    <div class="col-md-12 text-center">
-                                                        <div class="sc-time">8:00 - 8:30 PM IST</div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="schedule-listing">
-                                                            <div class="schedule-item">
-                                                                <div class="sc-info">
-                                                                    <h3>How to get better at hacking</h3>
-                                                                    <p> In the session you will understand on how to skill up your levels in hacking</p>
-                                                                    <span>CEO @PentesterLab</span>
-                                                                </div>
-                                                                <div class="sc-name">
-                                                                    <div class="sc-pic">
-                                                                        <img src="images-event/team/2.1.png" class="img-circle" alt="">
-                                                                    </div>
-                                                                    <h4>Louis Nyffenegger</h4>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="schedule-listing">
-                                                            <div class="schedule-item">
-                                                                <div class="sc-info">
-                                                                    <h3>Overview of Web3/smart contract hacking</h3>
-                                                                    <p>Get an Overview on hacking with the web3/smart contracts</p>
-                                                                    <span>CTO and cofounder of Immunefi</span>
-                                                                </div>
-                                                                <div class="sc-name">
-                                                                    <div class="sc-pic">
-                                                                        <img src="images-event/team/14.2.png" class="img-circle" alt="">
-                                                                    </div>
-                                                                    <h4>Duncan Townsend</h4>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- 9:00 -9:30 -->
-                                                <div class="row">
-                                                    <div class="col-md-12 text-center">
-                                                        <div class="sc-time">9:00 -9:30 PM IST</div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="schedule-listing">
-                                                            <div class="schedule-item">
-                                                                <div class="sc-info">
-                                                                    <h3>Security automation,(re) defined </h3>
-                                                                    <p>Security Through Intelligent Automation using Nuclei</p>
-                                                                    <span>Pentester and Bug Bounty Hunter</span>
-                                                                </div>
-                                                                <div class="sc-name">
-                                                                    <div class="sc-pic">
-                                                                        <img src="images-event/team/16.2.png" class="img-circle" alt="">
-                                                                    </div>
-                                                                    <h4>Dhiyaneshwaran DK</h4>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="schedule-listing">
-                                                            <div class="schedule-item">
-                                                                <div class="sc-info">
-                                                                    <h3>Networking Session</h3>
-                                                                    <p>Get in touch with diverse people on a network session</p>
-                                                                    <span>Feel free to talk with group by joining in rooms</span>
-                                                                </div>
-                                                                <div class="sc-name">
-                                                                    <div class="sc-pic">
-                                                                        <img src="images-event/team/8.2.jpg" class="img-circle" alt="">
-                                                                    </div>
-                                                                    <h4>Break</h4>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- 10:00-10:30 -->
-                                                <div class="row">
-                                                    <div class="col-md-12 text-center">
-                                                        <div class="sc-time">10:00 - 10:30 PM IST</div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="schedule-listing">
-                                                            <div class="schedule-item">
-                                                                <div class="sc-info">
-                                                                    <h3>Bug Hunter to Security Engineer</h3>
-                                                                    <p> The experiences in his journey of evolving as security engineer</p>
-                                                                    <span>Security Engineer @Microsoft</span>
-                                                                </div>
-                                                                <div class="sc-name">
-                                                                    <div class="sc-pic">
-                                                                        <img src="images-event/team/9.1.jpg" class="img-circle" alt="">
-                                                                    </div>
-                                                                    <h4>Jun Kokatsu</h4>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="schedule-listing">
-                                                            <div class="schedule-item">
-                                                                <div class="sc-info">
-                                                                    <h3>Landing your first Cybersecurity Internship</h3>
-                                                                    <p>The ‘what's and ‘what not’s to do to land into your internship</p>
-                                                                    <span>Cybersecurity researcher.</span>
-                                                                </div>
-                                                                <div class="sc-name">
-                                                                    <div class="sc-pic">
-                                                                        <img src="images-event/team/9.2.jpg" class="img-circle" alt="">
-                                                                    </div>
-                                                                    <h4>Nithin R</h4>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!-- 10:30 - 11:00 -->
-                                                <div class="row">
-                                                    <div class="col-md-12 text-center">
-                                                        <div class="sc-time">10:30 - 11:00 PM IST</div>
-                                                    </div>
-                                                    <div class="col-md-6">
-                                                        <div class="schedule-listing">
-                                                            <div class="schedule-item">
-                                                                <div class="sc-info">
-                                                                    <h3>Building Security Champions</h3>
-                                                                    <p> In here you will know How to attract,train,engage the right people to your program</p>
-                                                                    <span>Founder @ We Hack Purple</span>
-                                                                </div>
-                                                                <div class="sc-name">
-                                                                    <div class="sc-pic">
-                                                                        <img src="images-event/team/5.1.jpg" class="img-circle" alt="">
-                                                                    </div>
-                                                                    <h4>Tanya Janca</h4>
-                                                                </div>
-                                                                <div class="clearfix"></div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <!-- <div class="col-md-6">
-                                                        <div class="schedule-listing">
-                                                            <div class="schedule-item">
-                                                                <div class="sc-info">
-                                                                    <h3></h3>
-                                                                    <p></p>
-                                                                    <span></span>
-                                                                </div>
-                                                                <div class="sc-name">
-                                                                    <div class="sc-pic">
-                                                                        <img src="images-event/team/5.2.jpg" class="img-circle" alt="">
-                                                                    </div>
-                                                                    <h4></h4>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div> -->
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- section close -->
-
-            <!-- section begin -->
-            <section id="section-ticket" class="text-light" data-bgimage="url(images-event/bg/2.jpg) fixed top">
-                <div class="wm wm-border dark wow fadeInDown">Slots</div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 offset-md-3 text-center wow fadeInUp">
-                            <h1>Reserve Your Slot</h1>
-                            <div class="separator"><span><i class="fa fa-square"></i></span></div>
-                            <div class="spacer-single"></div>
-                        </div>
-
-                        <div class="col-md-6 offset-md-3 text-center wow fadeInUp">
-                            <div class="pricing-s1 mb30 wow fadeInUp">
-                                <div class="ribbon color-2 text-white">Filling Fast</div>
-                                <div class="top">
-                                    <h1>Conference Pass</h1>
-                                    <p class="price"><span class="currency id-color">$</span> <b>5.00</b></p>
-                                </div>
-                                <div class="bottom">
-                                    <ul>
-                                        <li><i class="icon_check_alt2"></i>Conference Tickets</li>
-                                        <li><i class="icon_check_alt2"></i>Lifetime access to recorded videos of sessions</li>
-                                        <li><i class="icon_check_alt2"></i>Access to networking lounge</li>
-                                        <li><i class="icon_check_alt2"></i>Interactive sessions access</li>
-                                        <li><i class="icon_check_alt2"></i>Partner booths</li>
-                                    </ul>
-                                    <a>
-                                        <form>
-                                            <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_IkurresccCErYp" async></script>
-                                        </form>
-                                    </a>
-                                </div>
-                                <div class="ps1-deco"></div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-            <!-- section close -->
-
-            <!-- section begin -->
-            <section id="section-sponsors" data-bgimage="url(images-event/bg/3.png) fixed center no-repeat">
-                <div class="wm wm-border dark wow fadeInDown ">sponsors</div>
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-6 offset-md-3 text-center wow fadeInUp">
-                            <h1>Official Sponsors</h1>
-                            <div class="separator"><span><i class="fa fa-square"></i></span></div>
-                            <div class="spacer-single"></div>
-                        </div>
-
-                        <div class="col-md-12 text-center wow fadeInUp">
-                            <h3>Diamond Sponsors</h3>
-                            <div class="spacer-single"></div>
-                            <a target="_blank" href="https://www.linkedin.com/company/hackrew/mycompany/"><img src="images-event/logo/5.png" alt="" class="grey-hover"></a>
-
-                            <h3>Platinum Sponsors</h3>
-                            <div class="spacer-single"></div>
-                            <a target="_blank" href="https://www.yeswehack.com/"><img src="images-event/logo/3.png" alt="" class="grey-hover"></a>
-                            <a target="_blank" href="https://twitter.com/PatchChainHQ"><img src="images-event/logo/6.png" alt="" class="grey-hover"></a>
-                            <!-- <img src="images-event/logo/7.png" alt="" class="grey-hover">
-                            <img src="images-event/logo/8b.png" alt="" class="grey-hover">   -->
-
-                            <h3>Gold Sponsors</h3>
-                            <div class="spacer-single"></div>
-                            <a target="_blank" href="https://www.rehack.xyz/home/"><img src="images-event/logo/1.png" alt="" class="grey-hover"></a>
-                            <a target="_blank" href="https://saptanglabs.com/"><img src="images-event/logo/2.png" alt="" class="grey-hover"></a>
-                            <a target="_blank" href="https://www.traceable.ai/"><img src="images-event/logo/4.png" alt="" class="grey-hover"></a>
-                            <div class="spacer-double"></div>
-                            <!-- <img src="images-event/logo/4.png" alt="" class="grey-hover"> -->
-
-                            <h3>Community Builder</h3>
-                            <div class="spacer-single"></div>
-                            <a target="_blank" href="https://twitter.com/bsidesahmedabad"><img src="images-event/logo/7.png" alt="" class="grey-hover"></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- section close -->
-            <!-- section begin -->
-            <section id="call-to-action" class="gradient-to-right text-light call-to-action" aria-label="cta">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-8 col-md-7">
-                            <h3 class="size-2 no-margin">Reserve your slots before it gets filled.</h3>
-                        </div>
-
-                        <div class="col-lg-4 col-md-5 text-right">
-                            <a>
-                                <form>
-                                    <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_IkurresccCErYp" async>
-                                    </script>
-                                </form>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- logo carousel section close -->
-
-            <section id="section-fun-facts" class="text-light" data-bgimage="url(images-event/bg/3.jpg) fixed top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay=".5s">
-                            <div class="de_count">
-                                <i class="icon_id-2 id-color-2"></i>
-                                <h3>1500+</h3>
-                                <span class="text-white">Participants</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay=".5s">
-                            <div class="de_count">
-                                <i class="icon_easel id-color-2"></i>
-                                <h3>15+</h3>
-                                <span class="text-white">Topics</span>
-                            </div>
-                        </div>
-
-                        <div class="col-md-4 col-xs-6 wow fadeIn" data-wow-delay=".5s">
-                            <div class="de_count">
-                                <i class="icon_headphones id-color-2"></i>
-                                <h3>14+</h3>
-                                <span class="text-white">Speakers</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-
-            <!-- footer begin -->
-            <footer class="style-2">
-                <div class="container">
-                    <div class="row align-items-middle">
-                        <div class="col-lg-3 col-md-4 text-center">
-                            <a href="privacy.html">Privacy Policy</i></a></br>
-                            <a href="terms.html">Terms & Conditions</i></a></br>
-                            <a href="refunds.html">Refunds Policy</i></a>
-                        </div>
-                        <div class="col-lg-6 col-md-4">
-                            <center>
-                                &copy; IWCon2022 - Event Conference by <span class="id-color">Hackrew with <i class="fa fa-heart" aria-hidden="true"></i></span>
-                            </center>
-                        </div>
-                        <div class="col-lg-3 col-md-4 text-center">
-                            <div class="social-icons">
-                                <a href="https://twitter.com/InfoSecComm"><i class="fa fa-twitter fa-lg"></i></a>
-                                <a href="https://infosecwriteups.com/"><i class="fa fa-medium fa-lg"></i></a>
-                                <a href="https://www.linkedin.com/company/infosec-writeups/"><i class="fa fa-linkedin fa-lg"></i></a>
-                            </div>
-                            <div class="h6 padding10 pt0 pb0"><a href="#">Explore</div> 
-                            <div class="h6 padding10 pt0 pb0"><a href="contact.html">Contact Us</div> 
-                        </div>
-                    </div>
-                    <!-- <div class="col-lg-12 col-md-12">
-                        <center>
-                            Flat No:103, 1st Floor, Pooja Residency Near, MNR School, Kailash Nagar, HYDERABAD, TG,500050, IN
-                        </center>
-                    </div> -->
-                </div>
-                <a href="#" id="back-to-top" class="custom-1"></a>
-            </footer>
-            <!-- footer close -->
-            </div>
-            </div>
-
-
-            <div id="de-extra-wrap" class="de_light">
-                <span id="b-menu-close">
-            <span></span>
-                <span></span>
-                </span>
-                <div class="de-extra-content">
-                    <h3>Information</h3>
-                    <p>
-                        With interactive keynotes and hands-on workshops, IWCon speakers will share their experiences and instruct through examples so you can apply the same.
-                    </p>
-
-                    <div class="spacer10"></div>
-
-                    <div class="p-4 border">
-                        <div class="text-center">
-                            <h1>600+</h1>
-                            <p>slots Filling fast....</p>
-                            <a href="https://razorpay.com/payment-button/pl_IkurresccCErYp/view/?utm_source=payment_button&utm_medium=button&utm_campaign=payment_button" class="btn-custom btn-fullwidth text-white scroll-to">Book Your Slot</a>
-                        </div>
-                    </div>
-
-                    <div class="spacer-single"></div>
-
-                    <h3>Where &amp; When?</h3>
-                    <div class="h6 padding10 pt0 pb0"><i class="i_h3 fa fa-calendar-check-o id-color"></i>February 26th and 27th</div>
-                    <div class="h6 padding10 pt0 pb0"><i class="i_h3 fa fa-map-marker id-color"></i>Virtual Conference</div>
-                    <div class="h6 padding10 pt0 pb0"><i class="i_h3 fa fa-envelope-o id-color"></i><a href="mailto:contact@infosecwriteups.com">contact@infosecwriteups.com</div>
-        </div>
+<body>
+
+<div class='loader'>
+<div class='loader--dot'></div>
+<div class='loader--dot'></div>
+<div class='loader--dot'></div>
+<div class='loader--dot'></div>
+<div class='loader--dot'></div>
+<div class='loader--dot'></div>
+<div class='loader--text'></div>
+</div>
+
+<div class="main-container">
+
+<header class="header">
+<div class="container">
+<div class="row">
+<div class="col-lg-2">
+<div class="brand-logo">
+<a class="eventex-brand" href="index.html"><img src="assets/img/logo/logo-3.png" alt="IWCON2022"></a>
+</div>
+</div>
+
+<div class="col-lg-10" style="background-color: black">
+<nav class="navbar navbar-expand-lg">
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+</button>
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav ml-auto">
+<li class="nav-item active ">
+<a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+<ul class="dropdown-menu animation  slideUpIn">
+<!-- <li>
+<a href="index.html">Home One</a>
+</li>
+<li>
+<a href="home-2.html">Home Two</a>
+</li>
+<li>
+<a href="home-3.html">Home Three</a>
+</li>
+<li>
+<a href="home-4.html">Home four</a>
+</li>
+<li>
+<a href="home-5.html">Home Five</a>
+</li> -->
+</ul>
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#about">About</a>
+<!-- <ul class="dropdown-menu animation  slideUpIn">
+<li>
+<a href="pricing.html">Pricing</a>
+</li>
+<li>
+<a href="about.html">About</a>
+</li>
+<li>
+<a href="error-404.html">Error 404</a>
+</li>
+<li>
+<a href="contact.html">Contact</a>
+</li>
+</ul> -->
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#speakers">Speakers</a>
+<!-- <ul class="dropdown-menu animation  slideUpIn">
+<li>
+<a href="speakers.html">Speakers</a>
+</li>
+<li>
+<a href="speakers-single.html">Speakers Single</a>
+</li>
+</ul> -->
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#event-schedule">Schedule</a>
+<!-- <ul class="dropdown-menu animation  slideUpIn">
+<li>
+<a href="event-schedule.html">Event Schedule</a>
+</li>
+<li>
+<a href="event-table.html">Event Table</a>
+</li>
+</ul> -->
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#tickets">Ticket</a>
+<!-- <ul class="dropdown-menu animation  slideUpIn">
+<li>
+<a href="blog-single.html">Blog Single</a>
+</li>
+<li>
+<a href="blog-right.html">Blog Right</a>
+</li>
+</ul> -->
+</li>
+<li class="nav-item">
+<a class="nav-link" href="#sponsers">Sponsers</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="https://razorpay.com/payment-button/pl_IkurresccCErYp/view/?utm_source=payment_button&utm_medium=button&utm_campaign=payment_button">Register</a>
+</li>
+</ul>
+</div>
+</nav>
+</div>
+
+<!-- <div class="col-lg-6 d-none d-lg-block col-sm-16">
+  <ul>
+    <li class="header-ticket">
+      <a class="pr-0" href="#">Buy Ticket</a>
+    </li>
+  </ul>
+</div> -->
+
+</div>
+
+</div>
+
+</header>
+
+
+<div class="hero-banner-area hero-bg-4 parallax">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-7 col-sm-7">
+        <div class="banner-content">
+          <img class="hero-bg" src="./assets/img/bg/15.jpg" alt="banner-img">
+<h1>Infosec WriteUps'
+    </h1>
+<h2>Conference 2022</h2>
+<div>
+    <p style="font-size: 13px; line-height: 20px; font-weight:bolder;">Network With World’s Best Infosec Professionals. Find How Cybersecurity Pros Achieved Success.<br > Add New Skills to Your CV. All In Just $5.
+    <br ><br >Join the Grand Virtual Conference and Networking Event. Organized by the Internet's largest & most loved Infosec Publication. </p>
+</div>
+<div class="container">
+  <div class="banner_dates">
+    <div class="row">
+      <div class="col">
+        <i class="fa fa-calendar-check-o" aria-hidden="true" style="line-height: 20px; font-size: 12px;">&nbsp;December 17<sup>th</sup> & 18<sup>th</sup>, 2022</i>
+      </div>
+      <div class="col">
+        <i class="fa fa-user" aria-hidden="true" style="line-height: 20px; font-size: 12px;">&nbsp;16 Awsome Speakers</i>
+      </div>
+      <div class="col">
+        <i class="fa fa-map-marker" aria-hidden="true" style="line-height: 20px; font-size: 12px;">&nbsp;Virtual Conference</i>
+      </div>
     </div>
-    <div id="de-overlay"></div>
-
-    <!-- Javascript Files
-    ================================================== -->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jpreLoader.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/easing.js"></script>
-    <script src="js/jquery.flexslider-min.js"></script>
-    <script src="js/jquery.scrollto.js"></script>
-    <script src="js/owl.carousel.js"></script>
-    <script src="js/jquery.countTo.js"></script>
-    <script src="js/video.resize.js"></script>
-    <script src="js/validation.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/jquery.magnific-popup.min.js"></script>
-    <script src="js/jquery.stellar.min.js"></script>
-	<script src="js/enquire.min.js"></script>	
-    <script src="js/designesia.js"></script>	
-	<script src="js/jquery.event.move.js"></script>
-	<script src="js/jquery.plugin.js"></script>
-    <script src="js/jquery.countdown.js"></script>
-    <script src="js/countdown-custom.js"></script>
-	<script src="js/particles.js"></script>
-    <script src="js/particles-settings.js"></script>
-    <script src="js/jquery.twentytwenty.js"></script>	
-
+  </div>
+  </div>
+  <div class="d-flex flex-row mb-3">
+    <div class="p-2">
+      <div class="primary-btn">
+        <a href="" class="btn-primary">Save Your Seat...</a>
+      </div>
+    </div>
+    <div class="p-2" style="margin-top: 22px;">
+      <form>
+        <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_K8cxPtmUyBH2PC" async> </script>
+      </form>
+    </div>
+  </div>
+  
+</div>
+</div>
+<div class="col-lg-3">
+    <div class="">
     
-	
-	<script>
-    $(window).on("load", function(){
-      $(".twentytwenty-container[data-orientation!='vertical']").twentytwenty({default_offset_pct: 0.7});
-      $(".twentytwenty-container[data-orientation='vertical']").twentytwenty({default_offset_pct: 0.3, orientation: 'vertical'});
-    });
-    </script>
+    </div>
+    </div>
 
-	    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-36NK71DKMJ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+</div>
 
-  gtag('config', 'G-36NK71DKMJ');
-</script>
+</div>
 
+</div>
+
+
+<div class="conference-synopsis-area pad100" id="about">
+<div class="container">
+<div class="row">
+<div class="col-lg-6 xs-mb40">
+<img style="box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; border-radius: 8px;" class="img-fluid mx-auto d-block" src="assets/img/mockup/net.jpg" alt="">
+</div>
+
+<div class="col-lg-6">
+<div class="inner-content">
+<div class="section-title">
+<!-- <div class="title-text pl"> -->
+<h2>Network and Learn From World’s 
+    Best Infosec Professionals</h2>
+<!-- </div> -->
+</div>
+<p>Most Infosec conferences only revolve around Technicalities. But no one really talks about the emotional struggles of living in the Infosec world. No one shares their success blueprint of how exactly they went from 0 to great heights. And how you can do the same.
+</p><br />
+<p>We attempt to fill this gap. <br >
+    Our speakers from around the world will share the behind-the-scenes of their journey so you can add new amazing skills and mindset shifts to your arsenal. </p>
+    <!-- <div class="primary-btn">
+        <a href="#" class="btn-primary">Save Your Seat...</a>
+    </div> -->
+    <div class="d-flex flex-row mb-3">
+      <div class="p-2">
+        <div class="primary-btn">
+          <a href="" class="btn-primary">Save Your Seat...</a>
+        </div>
+      </div>
+      <div class="p-2" style="margin-top: 22px;">
+        <form>
+          <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_K8cxPtmUyBH2PC" async> </script>
+        </form>
+      </div>
+    </div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+<!-- why should you join start -->
+<div class="container">
+    <div class="section-title text-center">
+        <div class="title-text mb50">
+        <h2>Why You Should Join The Event?</h2>
+        </div>
+        </div>
+    <div class="row">
+      <div class="col">
+        <div class="card">
+            <div class="card-body" id="cards">
+                <div class="row">
+                    <div class="col-2"><i class="fa fa-microphone" style="font-size: 40px; color: orange;" aria-hidden="true"></i></div>
+                    <div class="col-10">
+                        <h5>EXPERT TALKS</h5>
+                        <p style="font-size: 12px; line-height: 1.3rem;">Leading experts and industries top practitioners from around the globe to share their latest security based ideas and techniques.</p>
+                    </div>
+                  </div>
+            </div>
+          </div>
+      </div>
+      <div class="col">
+        <div class="card">
+            <div class="card-body" id="cards">
+                <div class="row">
+                    <div class="col-2"><i class="fa fa-lightbulb-o" style="font-size: 40px; color: orange;" aria-hidden="true"></i></div>
+                    <div class="col-10">
+                        <h5>LEARN</h5>
+                        <p style="font-size: 12px; line-height: 1.3rem;">Learn from the journeys our experts share and how they shaped their success, so you can do it too.</p>
+                    </div>
+                  </div>
+            </div>
+          </div>
+      </div>
+      <div class="col">
+        <div class="card">
+            <div class="card-body" id="cards">
+                <div class="row">
+                    <div class="col-2"><i class="fa fa-sitemap" style="font-size: 40px;color: orange;" aria-hidden="true"></i></div>
+                    <div class="col-10">
+                        <h5>INTERACT</h5>
+                        <p style="font-size: 12px; line-height: 1.3rem;">Keynotes and Hands-on workshops so you can ask your questions live and get all your doubts cleared.</p>
+                    </div>
+                  </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col">
+            <div class="card">
+                <div class="card-body" id="cards">
+                    <div class="row">
+                        <div class="col-2"><i class="fa fa-building" style="font-size: 40px; color: orange;" aria-hidden="true"></i></div>
+                        <div class="col-10">
+                            <h5>VIRTUAL VENUE</h5>
+                            <p style="font-size: 12px; line-height: 1.3rem;">Due to ongoing pandemic, we are focusing on virtual conference to make sure beginners and professional security geeks be up-to date with the latest security technologies.</p>
+                        </div>
+                      </div>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body" id="cards">
+                    <div class="row">
+                        <div class="col-2"><i class="fa fa-users" style="font-size: 35px; color: orange;" aria-hidden="true"></i></div>
+                        <div class="col-10">
+                            <h5>NETWORK</h5>
+                            <p style="font-size: 12px; line-height: 1.3rem;">Network with other Infosec professionals with similar interests, so you can make powerful new connections and collaborations. You can also choose to have private talks with any fellow attendee you like.</p>
+                        </div>
+                      </div>
+                </div>
+              </div>
+        </div>
+        <div class="col">
+            <div class="card">
+                <div class="card-body" id="cards">
+                    <div class="row">
+                        <div class="col-2"><i class="fa fa-mortar-board" style="font-size: 35px; color: orange;" aria-hidden="true"></i></div>
+                        <div class="col-10">
+                            <h5>SOAR</h5>
+                            <p style="font-size: 12px; line-height: 1.3rem;">Boost your knowledge, reinforce your mindset, and add a few new skills to your CV. Take home new ways to tackle problems and apply in your journey so you can soar to the top.</p>
+                        </div>
+                      </div>
+                </div>
+              </div>
+        </div>
+      </div>
+  </div>
+  <br />
+<!-- why should you join end -->
+
+<!-- Speakers Start -->
+<div class="whos-speaking-area pad100" id="speakers">
+    <div class="container">
+    <div class="row">
+    <div class="col-lg-12">
+    <div class="section-title text-center">
+    <div class="title-text mb50">
+    <h2>Who's Speaking?</h2>
+    </div>
+    </div>
+    </div>
+    
+    </div>
+    
+    <div class="row mb50">
+    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12" style="z-index: 1;">
+    <div class="speakers xs-mb30">
+    <div class="spk-img">
+    <img style="height: 30%;" class="img-fluid" src="assets/img/team/1.jpeg" alt="trainer-img">
+    <ul>
+    <li><a href="https://twitter.com/Th3G3nt3lman"><i class="fa fa-twitter"></i></a></li>
+    <!-- <li><a href="#"><i class="fa fa-camera"></i></a></li>
+    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+    <li><a href="#"><i class="fa fa-life-ring"></i></a></li> -->
+    </ul>
+    </div>
+    <div class="spk-info">
+    <a href="speakers-single.html">
+    <h3>Majd Aldeen Atiyat</h3>
+    </a>
+    <p>Bug bounty hunter and  full time security advisor</p>
+    </div>
+    </div>
+    </div>
+    
+    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12" style="z-index: 1;">
+    <div class="speakers xs-mb30">
+    <div class="spk-img">
+    <img class="img-fluid" src="assets/img/team/Orwa speaker.png" alt="trainer-img">
+    <ul>
+    <li><a href="https://twitter.com/GodfatherOrwa"><i class="fa fa-twitter"></i></a></li>
+    
+    </ul>
+    </div>
+    <div class="spk-info">
+    <a href="speakers-single.html">
+    <h3>Orwa Atyat</h3>
+    </a>
+    <p>Full Time Bug Hunter, Top 10 P1 Warrior On Bugcrowd</p>
+    </div>
+    </div>
+    </div>
+    
+    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12" style="z-index: 1;">
+    <div class="speakers xs-mb30">
+    <div class="spk-img">
+    <img class="img-fluid" src="assets/img/team/Ahsan Khan Speaker.jpg" alt="trainer-img">
+    <ul>
+    <li><a href="https://twitter.com/hunter0x7"><i class="fa fa-twitter"></i></a></li>
+    </ul>
+    </div>
+    <div class="spk-info">
+    <a href="speakers-single.html">
+    <h3>Ahsan Khan</h3>
+    </a>
+    <p>Admin Pwner</p>
+    </div>
+    </div>
+    </div>
+    
+    <div class="col-xl-3 col-lg-3 d-md-none d-lg-block col-sm-12 " style="z-index: 1;">
+    <div class="speakers">
+    <div class="spk-img">
+    <img class="img-fluid" src="assets/img/team/Luke Speaker.jpg" alt="trainer-img">
+    <ul>
+    <li><a href="https://twitter.com/hakluke"><i class="fa fa-twitter"></i></a></li>
+    </ul>
+    </div>
+    <div class="spk-info">
+    <a href="speakers-single.html">
+    <h3>Luke</h3>
+    </a>
+    <p>Hacker, bounty hunter, tool creator, founder of Haksec.</p>
+    </div>
+    </div>
+    </div>
+    
+    </div>
+    
+    <div class="row">
+    <div class="offset-2 no-gutter"></div>
+    
+    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12" style="z-index: 1;">
+    <div class="speakers xs-mb30">
+    <div class="spk-img">
+    <img class="img-fluid" src="assets/img/team/Gabrielle Speaker.jpeg" alt="trainer-img">
+    <ul>
+    <li><a href="https://twitter.com/gabsmashh"><i class="fa fa-twitter"></i></a></li>
+    </ul>
+    </div>
+    <div class="spk-info">
+    <a href="speakers-single.html">
+    <h3>Gabrielle Hempel</h3>
+    </a>
+    <p>Leader, hunter, cloud SME, security engineer @ Netwitness.</p>
+    </div>
+    </div>
+    </div>
+    
+    <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12" style="z-index: 1;">
+    <div class="speakers xs-mb30">
+    <div class="spk-img">
+    <img class="img-fluid" src="assets/img/team/Phillip Wylie Speaker.png" alt="trainer-img">
+    <ul>
+    <li><a href="https://twitter.com/PhillipWylie"><i class="fa fa-twitter"></i></a></li>
+    </ul>
+    </div>
+    <div class="spk-info">
+    <a href="speakers-single.html">
+    <h3>Phillip Wylie</h3>
+    </a>
+    <p>Hacker in Residence at CyCognito</p>
+    </div>
+    </div>
+    </div>
+    
+    <!-- <div class="col-xl-3 col-lg-3 col-md-4 col-sm-12" style="z-index: 1;">
+    <div class="speakers">
+    <div class="spk-img">
+    <img class="img-fluid" src="assets/img/team/7.jpg" alt="trainer-img">
+    <ul>
+    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+    <li><a href="#"><i class="fa fa-camera"></i></a></li>
+    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+    <li><a href="#"><i class="fa fa-life-ring"></i></a></li>
+    </ul>
+    </div>
+    <div class="spk-info">
+    <a href="speakers-single.html">
+    <h3>Lieke Martens</h3>
+    </a>
+    <p>Digital photography</p>
+     </div>
+    </div>
+    </div> -->
+    
+    </div>
+    
+    </div>
+    
+    </div>
+<!-- Speakers End -->
+
+<div id="event-schedule" class="event-schedule-area-two bg-color pad100">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="section-title text-center">
+<div class="title-text">
+<h2>Event Schedule</h2>
+</div>
+
+</div>
+</div>
+
+</div>
+
+<div class="row">
+<div class="col-lg-12">
+<ul class="nav custom-tab" id="myTab" role="tablist">
+<li class="nav-item">
+<a class="nav-link active" id="home-taThursday" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Day 1</a>
+</li>
+<li class="nav-item">
+<a class="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Day 2</a>
+</li>
+<!-- <li class="nav-item">
+<a class="nav-link" id="contact-tab" data-toggle="tab" href="#contact" role="tab" aria-controls="contact" aria-selected="false">Day 3</a>
+</li>
+<li class="nav-item d-none d-lg-blockd-none d-lg-block">
+<a class="nav-link" id="sunday-tab" data-toggle="tab" href="#sunday" role="tab" aria-controls="sunday" aria-selected="false">Day 4</a>
+</li>
+<li class="nav-item mr-0 d-none d-lg-block">
+<a class="nav-link" id="monday-tab" data-toggle="tab" href="#monday" role="tab" aria-controls="monday" aria-selected="false">Day 5</a>
+</li> -->
+</ul>
+<div class="tab-content" id="myTabContent">
+<div class="tab-pane fade show active" id="home" role="tabpanel">
+<div class="table-responsive">
+<table class="table">
+<thead>
+<tr>
+<th class="text-center" scope="col" style="background-color: #FF6107">Date</th>
+<th scope="col" style="background-color: #FF6107">Speakers</th>
+<th scope="col" style="background-color: #FF6107">Session</th>
+<th scope="col" style="background-color: #FF6107">Topic</th>
+<th class="text-center" scope="col" style="background-color: #FF6107">Venue</th>
+</tr>
+</thead>
+<tbody>
+<tr class="inner-box">
+<th scope="row">
+<div class="event-date">
+<span>17</span>
+<p>December, 2022</p>
+</div>
+</th>
+<td>
+<div class="event-img">
+<img src="assets/img/team/1.jpeg" alt="">
+</div>
+</td>
+<td>
+<div class="event-wrap">
+<h3><a href="speakers-single.html">Majd Aldeen Atiyat</a></h3>
+<div class="meta">
+<div class="organizers">
+<!-- <a href="#">Aslan Lingker</a> -->
+<p>Bug bounty hunter and full time security advisor.</p>
+</div>
+<div class="categories">
+<!-- <a href="#">Inspire</a> -->
+</div>
+<div class="time">
+<span>06:30 PM - 06:30 PM</span>
+</div>
+</div>
+</div>
+</td>
+<td>
+<div class="r-no">
+<span>My journey in bug bounty & Unique Findings</span>
+</div>
+</td>
+<td>
+<div class="primary-btn">
+<a class="btn-primary" href="#">Read More</a>
+</div>
+</td>
+</tr>
+<tr class="inner-box">
+<th scope="row">
+<div class="event-date">
+<span>17</span>
+<p>December, 2022</p>
+</div>
+</th>
+<td>
+<div class="event-img">
+<img src="assets/img/team/Orwa speaker.png" alt="">
+</div>
+</td>
+<td>
+<div class="event-wrap">
+<h3><a href="#">Orwa Atyat</a></h3>
+<div class="meta">
+<div class="organizers">
+<!-- <a href="#">Aslan Lingker</a> -->
+<p>Full Time Bug Hunter, Top 10 P1 Warrior On Bugcrowd</p>
+</div>
+<div class="categories">
+<!-- <a href="#">Inspire</a> -->
+</div>
+<div class="time">
+<span>06:35 PM - 06:40 PM</span>
+</div>
+</div>
+</div>
+</td>
+<td>
+<div class="r-no">
+<span>Recon & Skills, Tips</span>
+</div>
+</td>
+<td>
+<div class="primary-btn">
+<a class="btn-primary" href="#">Read More</a>
+</div>
+</td>
+</tr>
+<tr class="inner-box border-bottom-0">
+<th scope="row">
+<div class="event-date">
+<span>18</span>
+<p>December, 2022</p>
+</div>
+</th>
+<td>
+<div class="event-img">
+<img src="assets/img/team/Ahsan Khan Speaker.jpg" alt="">
+</div>
+</td>
+<td>
+<div class="event-wrap">
+<h3><a href="#">Ahsan Khan</a></h3>
+<div class="meta">
+<div class="organizers">
+<!-- <a href="#">Aslan Lingker</a> -->
+<p>Admin Pwner</p>
+</div>
+<div class="categories">
+<!-- <a href="#">Inspire</a> -->
+</div>
+<div class="time">
+<span>05:35 AM - 08:00 AM 2h 25'</span>
+</div>
+</div>
+</div>
+</td>
+<td>
+<div class="r-no">
+<span>My Approach to Accessing admin panels</span>
+</div>
+</td>
+<td>
+<div class="primary-btn">
+<a class="btn-primary" href="#">Read More</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+<div class="table-responsive">
+<table class="table">
+<thead>
+<tr>
+<th scope="col" style="background-color: #FF6107">Date</th>
+<th scope="col" style="background-color: #FF6107">Speakers</th>
+<th scope="col" style="background-color: #FF6107">Session</th>
+<th scope="col" style="background-color: #FF6107">Venue</th>
+<th scope="col" style="background-color: #FF6107">Venue</th>
+</tr>
+</thead>
+<tbody>
+<tr class="inner-box">
+<th scope="row">
+<div class="event-date">
+<span>16</span>
+<p>Novembar</p>
+ </div>
+</th>
+<td>
+<div class="event-img">
+<img src="assets/img/team/2.jpg" alt="">
+</div>
+</td>
+<td>
+<div class="event-wrap">
+<h3><a href="speakers-single.html">Toni Duggan</a></h3>
+<div class="meta">
+<div class="organizers">
+<a href="#">Aslan Lingker</a>
+</div>
+<div class="categories">
+<a href="#">Inspire</a>
+</div>
+<div class="time">
+<span>05:35 AM - 08:00 AM 2h 25'</span>
+</div>
+</div>
+</div>
+</td>
+<td>
+<div class="r-no">
+<span>Room B3</span>
+</div>
+</td>
+<td>
+<div class="primary-btn">
+<a class="btn-primary" href="#">Read More</a>
+</div>
+</td>
+</tr>
+<tr class="inner-box">
+<th scope="row">
+<div class="event-date">
+<span>16</span>
+<p>Novembar</p>
+</div>
+</th>
+<td>
+<div class="event-img">
+<img src="assets/img/team/1.jpg" alt="">
+</div>
+</td>
+<td>
+<div class="event-wrap">
+<h3><a href="speakers-single.html">Harman Kardon</a></h3>
+<div class="meta">
+<div class="organizers">
+<a href="#">Aslan Lingker</a>
+</div>
+<div class="categories">
+<a href="#">Inspire</a>
+</div>
+<div class="time">
+ <span>05:35 AM - 08:00 AM 2h 25'</span>
+</div>
+</div>
+</div>
+</td>
+<td>
+<div class="r-no">
+<span>Room B3</span>
+</div>
+</td>
+<td>
+<div class="primary-btn">
+<a class="btn-primary" href="#">Read More</a>
+</div>
+</td>
+</tr>
+<tr class="inner-box border-bottom-0">
+<th scope="row">
+<div class="event-date">
+<span>16</span>
+<p>Novembar</p>
+</div>
+</th>
+<td>
+<div class="event-img">
+<img src="assets/img/team/3.jpg" alt="">
+</div>
+</td>
+<td>
+<div class="event-wrap">
+<h3><a href="speakers-single.html">Billal Hossain</a></h3>
+<div class="meta">
+<div class="organizers">
+<a href="#">Aslan Lingker</a>
+</div>
+<div class="categories">
+<a href="#">Inspire</a>
+</div>
+<div class="time">
+<span>05:35 AM - 08:00 AM 2h 25'</span>
+</div>
+</div>
+</div>
+</td>
+<td>
+<div class="r-no">
+<span>Room B3</span>
+</div>
+</td>
+<td>
+<div class="primary-btn">
+<a class="btn-primary" href="#">Read More</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+<div class="table-responsive">
+<table class="table">
+<thead>
+<tr>
+<th scope="col" style="background-color: #FF6107">Date</th>
+<th scope="col" style="background-color: #FF6107">Speakers</th>
+<th scope="col" style="background-color: #FF6107">Session</th>
+<th scope="col" style="background-color: #FF6107">Venue</th>
+<th scope="col" style="background-color: #FF6107">Venue</th>
+</tr>
+</thead>
+<tbody>
+<tr class="inner-box">
+<th scope="row">
+<div class="event-date">
+<span>16</span>
+<p>Novembar</p>
+</div>
+</th>
+<td>
+<div class="event-img">
+<img src="assets/img/team/1.jpg" alt="">
+</div>
+</td>
+<td>
+<div class="event-wrap">
+<h3><a href="speakers-single.html">Harman Kardon</a></h3>
+<div class="meta">
+<div class="organizers">
+<a href="#">Aslan Lingker</a>
+</div>
+<div class="categories">
+<a href="#">Inspire</a>
+</div>
+<div class="time">
+<span>05:35 AM - 08:00 AM 2h 25'</span>
+</div>
+</div>
+</div>
+</td>
+<td>
+<div class="r-no">
+<span>Room B3</span>
+</div>
+</td>
+<td>
+<div class="primary-btn">
+<a class="btn-primary" href="#">Read More</a>
+</div>
+</td>
+</tr>
+<tr class="inner-box">
+<th scope="row">
+<div class="event-date">
+<span>16</span>
+<p>Novembar</p>
+</div>
+</th>
+<td>
+<div class="event-img">
+<img src="assets/img/team/3.jpg" alt="">
+</div>
+</td>
+<td>
+<div class="event-wrap">
+<h3><a href="speakers-single.html">Billal Hossain</a></h3>
+<div class="meta">
+<div class="organizers">
+<a href="#">Aslan Lingker</a>
+</div>
+<div class="categories">
+<a href="#">Inspire</a>
+</div>
+<div class="time">
+<span>05:35 AM - 08:00 AM 2h 25'</span>
+</div>
+</div>
+</div>
+</td>
+<td>
+<div class="r-no">
+<span>Room B3</span>
+</div>
+</td>
+<td>
+<div class="primary-btn">
+<a class="btn-primary" href="#">Read More</a>
+</div>
+</td>
+</tr>
+<tr class="inner-box border-bottom-0">
+<th scope="row">
+<div class="event-date">
+<span>16</span>
+<p>Novembar</p>
+</div>
+</th>
+<td>
+<div class="event-img">
+<img src="assets/img/team/2.jpg" alt="">
+</div>
+</td>
+<td>
+<div class="event-wrap">
+<h3><a href="speakers-single.html">Toni Duggan</a></h3>
+<div class="meta">
+<div class="organizers">
+<a href="#">Aslan Lingker</a>
+</div>
+<div class="categories">
+<a href="#">Inspire</a>
+</div>
+<div class="time">
+<span>05:35 AM - 08:00 AM 2h 25'</span>
+</div>
+</div>
+</div>
+ </td>
+<td>
+<div class="r-no">
+<span>Room B3</span>
+</div>
+</td>
+<td>
+<div class="primary-btn">
+<a class="btn-primary" href="#">Read More</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tab-pane fade" id="sunday" role="tabpanel" aria-labelledby="sunday-tab">
+<div class="table-responsive">
+<table class="table">
+<thead>
+<tr>
+<th scope="col" style="background-color: #FF6107">Date</th>
+<th scope="col" style="background-color: #FF6107">Speakers</th>
+<th scope="col" style="background-color: #FF6107">Session</th>
+<th scope="col" style="background-color: #FF6107">Venue</th>
+<th scope="col" style="background-color: #FF6107">Venue</th>
+</tr>
+</thead>
+<tbody>
+<tr class="inner-box">
+<th scope="row">
+<div class="event-date">
+<span>16</span>
+<p>Novembar</p>
+</div>
+</th>
+<td>
+<div class="event-img">
+<img src="assets/img/team/2.jpg" alt="">
+</div>
+</td>
+<td>
+<div class="event-wrap">
+<h3><a href="speakers-single.html">Toni Duggan</a></h3>
+<div class="meta">
+<div class="organizers">
+<a href="#">Aslan Lingker</a>
+</div>
+<div class="categories">
+<a href="#">Inspire</a>
+</div>
+<div class="time">
+<span>05:35 AM - 08:00 AM 2h 25'</span>
+</div>
+</div>
+</div>
+</td>
+<td>
+<div class="r-no">
+<span>Room B3</span>
+</div>
+ </td>
+<td>
+<div class="primary-btn">
+<a class="btn-primary" href="#">Read More</a>
+</div>
+</td>
+</tr>
+<tr class="inner-box">
+<th scope="row">
+<div class="event-date">
+<span>16</span>
+<p>Novembar</p>
+</div>
+</th>
+<td>
+<div class="event-img">
+<img src="assets/img/team/1.jpg" alt="">
+</div>
+</td>
+<td>
+<div class="event-wrap">
+<h3><a href="speakers-single.html">Harman Kardon</a></h3>
+<div class="meta">
+<div class="organizers">
+<a href="#">Aslan Lingker</a>
+</div>
+<div class="categories">
+<a href="#">Inspire</a>
+</div>
+<div class="time">
+<span>05:35 AM - 08:00 AM 2h 25'</span>
+</div>
+</div>
+</div>
+</td>
+<td>
+<div class="r-no">
+<span>Room B3</span>
+</div>
+</td>
+<td>
+<div class="primary-btn">
+<a class="btn-primary" href="#">Read More</a>
+</div>
+</td>
+</tr>
+<tr class="inner-box border-bottom-0">
+<th scope="row">
+<div class="event-date">
+<span>16</span>
+<p>Novembar</p>
+</div>
+</th>
+<td>
+<div class="event-img">
+<img src="assets/img/team/3.jpg" alt="">
+</div>
+</td>
+<td>
+ <div class="event-wrap">
+<h3><a href="speakers-single.html">Billal Hossain</a></h3>
+<div class="meta">
+<div class="organizers">
+<a href="#">Aslan Lingker</a>
+</div>
+<div class="categories">
+<a href="#">Inspire</a>
+</div>
+<div class="time">
+<span>05:35 AM - 08:00 AM 2h 25'</span>
+</div>
+</div>
+</div>
+</td>
+<td>
+<div class="r-no">
+<span>Room B3</span>
+</div>
+</td>
+<td>
+<div class="primary-btn">
+<a class="btn-primary" href="#">Read More</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="tab-pane fade" id="monday" role="tabpanel" aria-labelledby="monday-tab">
+<div class="table-responsive">
+<table class="table">
+<thead>
+<tr>
+<th scope="col">Date</th>
+<th scope="col">Speakers</th>
+<th scope="col">Session</th>
+<th scope="col">Venue</th>
+<th scope="col">Venue</th>
+</tr>
+</thead>
+<tbody>
+<tr class="inner-box">
+<th scope="row">
+<div class="event-date">
+<span>16</span>
+<p>Novembar</p>
+</div>
+</th>
+<td>
+<div class="event-img">
+<img src="assets/img/team/1.jpg" alt="">
+</div>
+</td>
+<td>
+<div class="event-wrap">
+<h3><a href="speakers-single.html">Harman Kardon</a></h3>
+<div class="meta">
+<div class="organizers">
+ <a href="#">Aslan Lingker</a>
+</div>
+<div class="categories">
+<a href="#">Inspire</a>
+</div>
+<div class="time">
+<span>05:35 AM - 08:00 AM 2h 25'</span>
+</div>
+</div>
+</div>
+</td>
+<td>
+<div class="r-no">
+<span>Room B3</span>
+</div>
+</td>
+<td>
+<div class="primary-btn">
+<a class="btn-primary" href="#">Read More</a>
+</div>
+</td>
+</tr>
+<tr class="inner-box">
+<th scope="row">
+<div class="event-date">
+<span>18</span>
+<p>Novembar</p>
+</div>
+</th>
+<td>
+<div class="event-img">
+<img src="assets/img/team/2.jpg" alt="">
+</div>
+</td>
+<td>
+<div class="event-wrap">
+<h3><a href="speakers-single.html">Toni Duggan</a></h3>
+<div class="meta">
+<div class="organizers">
+<a href="#">Aslan Lingker</a>
+</div>
+<div class="categories">
+<a href="#">Inspire</a>
+</div>
+<div class="time">
+<span>05:35 AM - 08:00 AM 2h 25'</span>
+</div>
+</div>
+</div>
+</td>
+<td>
+<div class="r-no">
+<span>Room B3</span>
+</div>
+</td>
+<td>
+<div class="primary-btn">
+<a class="btn-primary" href="#">Read More</a>
+</div>
+</td>
+</tr>
+<tr class="inner-box border-bottom-0">
+<th scope="row">
+<div class="event-date">
+<span>20</span>
+<p>Novembar</p>
+</div>
+</th>
+<td>
+<div class="event-img">
+<img src="assets/img/team/3.jpg" alt="">
+</div>
+</td>
+<td>
+<div class="event-wrap">
+<h3><a href="speakers-single.html">Billal Hossain</a></h3>
+<div class="meta">
+<div class="organizers">
+<a href="#">Aslan Lingker</a>
+</div>
+<div class="categories">
+<a href="#">Inspire</a>
+</div>
+<div class="time">
+<span>05:35 AM - 08:00 AM 2h 25'</span>
+</div>
+</div>
+</div>
+</td>
+<td>
+<div class="r-no">
+<span>Room B3</span>
+</div>
+</td>
+<td>
+<div class="primary-btn">
+<a class="btn-primary" href="#">Read More</a>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="primary-btn text-center">
+<a href="#" class="btn-primary">Download Schedule</a>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Sponsors Carousel start -->
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="section-title text-center" id="sponsers">
+    <div class="title-text mb50">
+    <h2 style="margin-top: 5%">Our Sponsors</h2>
+    </div>
+    </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="container">
+        <h5 style="text-align: center; margin-top: 5%;">Diamond Sponsers</h5>
+        <div class="row">
+          <div class="col-sm">
+            <img class="d-block w-100" src="assets/img/sponsers/25.png" alt="First slide">
+          </div>
+          <div class="col-sm">
+            <!-- <img class="d-block w-100" src="assets/img/sponsers/25.png" alt="First slide"> -->
+          </div>
+          <div class="col-sm">
+            <!-- <img class="d-block w-100" src="assets/img/sponsers/25.png" alt="First slide"> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="container">
+        <!-- <h5 style="text-align: center; margin-top: 5%;">Diamond Sponsers</h5> -->
+          <div class="row">
+            <div class="col-sm">
+              <!-- <img class="d-block w-100" src="assets/img/sponsers/25.png" alt="First slide"> -->
+            </div>
+            <div class="col-sm">
+              <!-- <img class="d-block w-100" src="assets/img/sponsers/25.png" alt="First slide"> -->
+            </div>
+            <div class="col-sm">
+              <!-- <img class="d-block w-100" src="assets/img/sponsers/25.png" alt="First slide"> -->
+            </div>
+          </div>
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="container">
+        <!-- <h5 style="text-align: center; margin-top: 5%;">Diamond Sponsers</h5> -->
+          <div class="row">
+            <div class="col-sm">
+              <!-- <img class="d-block w-100" src="assets/img/sponsers/25.png" alt="First slide"> -->
+            </div>
+            <div class="col-sm">
+              <!-- <img class="d-block w-100" src="assets/img/sponsers/25.png" alt="First slide"> -->
+            </div>
+            <div class="col-sm">
+              <!-- <img class="d-block w-100" src="assets/img/sponsers/25.png" alt="First slide"> -->
+            </div>
+          </div>
+      </div>
+
+      </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+<!-- Sponsors Carousel end -->
+
+<!-- <div class="our-sponsers-area-tow pad100 bg-color" id="sponsers">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="section-title text-center">
+<div class="title-text mb50 xs-mb40">
+<h2>Our Sponsers</h2>
+
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="row">
+<div class="sponsers-active owl-carousel owl-theme">
+<div class="col-lg-12">
+<div class="single-sponsers">
+<a href="#"><img src="assets/img/sponsers/10.png" alt=""></a>
+<h6>Diamond Sponsors</h6>
+</div>
+<div class="single-sponsers">
+<a href="#"><img src="assets/img/sponsers/12.png" alt=""></a>
+</div>
+</div>
+<div class="col-lg-12">
+<div class="single-sponsers">
+<a href="#"><img src="assets/img/sponsers/11.png" alt=""></a>
+</div>
+<div class="single-sponsers">
+<a href="#"><img src="assets/img/sponsers/15.png" alt=""></a>
+</div>
+</div>
+<div class="col-lg-12">
+<div class="single-sponsers">
+<a href="#"><img src="assets/img/sponsers/12.png" alt=""></a>
+</div>
+<div class="single-sponsers">
+<a href="#"><img src="assets/img/sponsers/16.png" alt=""></a>
+</div>
+</div>
+<div class="col-lg-12">
+<div class="single-sponsers">
+<a href="#"><img src="assets/img/sponsers/13.png" alt=""></a>
+</div>
+<div class="single-sponsers">
+<a href="#"><img src="assets/img/sponsers/17.png" alt=""></a>
+</div>
+</div>
+<div class="col-lg-12">
+<div class="single-sponsers">
+<a href="#"><img src="assets/img/sponsers/13.png" alt=""></a>
+</div>
+<div class="single-sponsers">
+<a href="#"><img src="assets/img/sponsers/10.png" alt=""></a>
+</div>
+</div>
+<div class="col-lg-12">
+<div class="single-sponsers">
+<a href="#"><img src="assets/img/sponsers/15.png" alt=""></a>
+</div>
+<div class="single-sponsers">
+<a href="#"><img src="assets/img/sponsers/10.png" alt=""></a>
+</div>
+</div>
+</div>
+<div class="col-lg-12">
+<div class="primary-btn text-center">
+<!-- <a href="#" class="btn-primary">Become Sponsor</a> -->
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="counter-up-area pad100 bg-counter parallax">
+  <div class="container">
+  <div class="row">
+  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-3">
+  <div class="single-counter xs-mb40">
+  <div class="count-content">
+  <span class="count">80</span>
+  <p>Countries</p>
+  </div>
+  </div>
+  </div>
+  
+  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-3">
+  <div class="single-counter xs-mb40">
+  <div class="count-content">
+  <span class="count">120</span>
+  <p>Programs</p>
+  </div>
+  </div>
+  </div>
+  
+  <div class="col-xl-3 col-lg-3 col-md-4 col-sm-3">
+  <div class="single-counter xs-mb40">
+  <div class="count-content">
+  <span class="count">65</span>
+  <p>Speakers</p>
+  </div>
+  </div>
+  </div>
+  
+  <div class="col-xl-3 col-lg-3 d-md-none d-lg-block col-sm-3">
+  <div class="single-counter">
+  <div class="count-content">
+  <span class="count">30</span>
+  <p>Sponsors</p>
+  </div>
+  </div>
+  </div>
+  
+  </div>
+  
+  </div>
+  
+  </div>
+
+<div class="pricing-tables-area pad100" id="tickets">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="section-title text-center">
+<div class="title-text mb50">
+<h2>Reserve Your Slot</h2>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="row">
+<div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+<!-- <div class="pricing-box xs-mb30">
+<div class="icons">
+<img src="assets/img/pricing/1.png" alt="">
+</div>
+<div class="pricing-title">Personal</div>
+<div class="pricing-content">
+<ul>
+<li>1. Entrance</li>
+<li>2. Coffee Break referrentur</li>
+<li>3 One FREE bonus theme</li>
+<li>4. Free Lunch & Snacks.</li>
+<li>5. Certificate, Plugins & ebook</li>
+</ul>
+</div>
+<div class="pricing-header">
+<div class="price-value">
+<span class="amount">
+<span class="currency">$</span>55
+<span class="month">month</span>
+</span>
+</div>
+</div>
+<div class="bordered-btn">
+<a href="#">Buy Ticket</a>
+</div>
+</div> -->
+</div>
+
+<div class="col-xl-6 col-lg-6 col-md-6 col-sm-12" style="z-index: 1;">
+<div class="pricing-box xs-mb30">
+<div class="icons">
+<img src="assets/img/pricing/2.png" alt="">
+</div>
+<div class="pricing-title">Conference Pass</div>
+<div class="pricing-content">
+<ul>
+<li style="font-size: 20px;"><i class="fa fa-check-square" style="color: orange;" aria-hidden="true"></i> &nbsp;Conference Tickets</li>
+<li style="font-size: 20px;"><i class="fa fa-check-square" style="color: orange;" aria-hidden="true"></i> &nbsp; Lifetime access to recorded videos of sessions</li>
+<li style="font-size: 20px;"><i class="fa fa-check-square" style="color: orange;" aria-hidden="true"></i> &nbsp; Access to networking lounge</li>
+<li style="font-size: 20px;"><i class="fa fa-check-square" style="color: orange;" aria-hidden="true"></i> &nbsp; Interactive sessions access</li>
+<li style="font-size: 20px;"><i class="fa fa-check-square" style="color: orange;" aria-hidden="true"></i> &nbsp; Partner booths</li>
+</ul>
+</div>
+<div class="pricing-header">
+<div class="price-value">
+<span class="amount">
+<span class="currency">$</span>10
+<span class="month"></span>
+</span>
+</div>
+</div>
+<!-- <button class="btn btn-warning" type="submit">Button</button> -->
+<form>
+  <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_K8cxPtmUyBH2PC" async> </script>
+</form>
+</div>
+</div>
+
+<div class="col-xl-3 col-lg-3 col-md-3 col-sm-12">
+<!-- <div class="pricing-box">
+<div class="icons">
+<img src="assets/img/pricing/3.png" alt="">
+</div>
+<div class="pricing-title">Premium</div>
+<div class="pricing-content">
+<ul>
+<li>1. Entrance</li>
+<li>2. Coffee Break referrentur</li>
+<li>3 One FREE bonus theme</li>
+<li>4. Free Lunch & Snacks.</li>
+<li>5. Certificate, Plugins & ebook</li>
+</ul>
+</div>
+<div class="pricing-header">
+<div class="price-value">
+<span class="amount">
+<span class="currency">$</span>99
+<span class="month">month</span>
+</span>
+</div>
+</div>
+<div class="bordered-btn">
+<a href="#">Buy Ticket</a>
+</div>
+</div> -->
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+<!-- Conference details -->
+<!-- <div class="contact-us-area home-1 pad100">
+<div class="container">
+<div class="row">
+<div class="col-lg-4 col-md-4 col-sm-4">
+<div class="icon-box xs-mb30">
+<div class="box-icons">
+<img src="assets/img/others/2.png" alt="">
+</div>
+<div class="inner-content">
+<h3>Conference Location</h3>
+<p>Washington State Convention Center</p>
+<p>705 Pike Street</p>
+<p> 705 Pike Street Seattle, WA 98101</p>
+<p>Phone: 206-694-5000</p>
+</div>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-4 col-sm-4">
+<div class="icon-box xs-mb30">
+<div class="box-icons">
+<img src="assets/img/others/3.png" alt="">
+</div>
+<div class="inner-content">
+<h3>Hotel Information</h3>
+<p>Sed minim feugiat quaestio ut. Erat singulist mei, eum reque ceteros omittantur ea. Cum facilisi molestiae coaturqet, vim molestiae vitupe comp</p>
+</div>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-4 col-sm-4">
+<div class="icon-box">
+<div class="box-icons">
+<img src="assets/img/others/4.png" alt="">
+</div>
+<div class="inner-content">
+<h3>Airport Information</h3>
+<p>Washington State Convention Center</p>
+<p>705 Pike Street</p>
+<p> 705 Pike Street Seattle, WA 98101</p>
+<p>Phone: 206-694-5000</p>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+</div> -->
+<!-- Conference details end -->
+
+
+<!-- Contact us Start -->
+<!-- <div class="contact-us-area-two pad-top100 bg-contact parallax no-attm">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="section-title text-center">
+<div class="title-text mb50">
+<h2>Contact Us</h2>
+</div>
+</div>
+</div>
+
+</div>
+
+<div class="row">
+<div class="col-lg-4 pr-0">
+<div class="inner-box">
+<form action="#">
+<div class="row">
+<div class="col-lg-12 mb50">
+<input class="form-control" type="text" placeholder="Name" required>
+</div>
+<div class="col-lg-12 mb50">
+<input class="form-control" type="email" placeholder="Email" required>
+</div>
+<div class="col-lg-12 mb50">
+<input class="form-control" type="text" placeholder="Subject" required>
+</div>
+<div class="col-lg-12">
+<textarea class="form-control" name="massage" placeholder="Massage"></textarea>
+</div>
+<div class="col-lg-12">
+<button class="btn-primary" type="submit">Send Message</button>
+</div>
+ </div>
+</form>
+</div>
+</div>
+
+<div class="col-lg-8 pl-0">
+
+<div class="gmap">
+<div id="googlemap"></div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div> -->
+<!-- Contact us End -->
+
+<div class="footer-area ptb bg-footer parallax">
+<div class="container">
+<div class="row">
+<div class="col-lg-1">
+<div class="am">
+<div class="f-logo">
+<img style="width: 150%; height: 50%;;" src="assets/img/logo/logo-2.png" alt="">
+</div>
+<div class="border-right"></div>
+</div>
+</div>
+
+<div class="col-lg-9 offset-1"  style="padding-left: 3px;">
+<div class="f-content">
+<div class="inner-content">
+<!-- <div class="f-icon">
+<i class="fa fa-map-marker"></i>
+</div>
+<span>5151 State Los Angeles<br> California, TX 90032</span>
+</div> -->
+<p style="cursor: pointer; font-size: 0.8rem; line-height: 1.2rem;"><a style="color: white;" href="https://infosecwriteups.com/">From Infosec Writeups: A lot is coming up in the Infosec every day that it’s hard to keep up with. Join our weekly newsletter to get all the latest Infosec trends in the form of 5 articles, 4 Threads, 3 videos, 2 Github Repos and tools, and 1 job alert for FREE! https://weekly.infosecwriteups.com/</a></p>
+<div class="sub-btn">
+<!-- <input type="text" placeholder="Your email address ">
+<button type="submit">Subscribe</button> -->
+</div>
+<br />
+<div class="f-social">
+  <div class="col-lg-3  ">
+    <div class="am">
+    <div class="f-logo">
+      <!-- <img style="width: 150%; height: 50%;;" src="assets/img/logo/logo-2.png" alt=""> -->
+      <ul>
+      <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+      <li><a href="#"><i class="fa fa-medium"></i></a></li></ul></n>
+    </ul>
+    <h5 class="footer-pages"><a href="./privacy-policy.html">Privacy Policy</a></h5></n>
+    <h5 class="footer-pages"><a href="./terms-and-conditions.html">Terms & Conditions</a></h5></n>
+    <h5 class="footer-pages"><a href="./refund.html">Refunds Policy</a></h5>
+    </div>
+    <!-- <h5 class="footer-pages">Explore</h5><br /> -->
+      <h5 class="footer-pages"><a href="contact.html">Contact Us</a></h5><br />
+    <div class="border-right"></div>
+    </div>
+    </div>
+</div>
+</div>
+</div>
+
+</div> 
+<a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647; display: block;"></a>
+
+<div class="row">
+<div class="col-lg-12">
+<div class="copyright">
+<p>©IWCon2022 - Event Conference by Hackrew with</p>
+<em><i class="fa fa-heart"></i></em>&nbsp;<a href="#"></a>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+</div>
+
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlUJtsIi_FRurx0i2WUGoxf_KaNoHmc4o"></script>
+<script src="assets/js/vendor/map.js"></script>
+
+<script src="assets/js/vendor/jquery-3.2.1.min.js"></script>
+
+<script src="assets/js/vendor/jquery-migrate.js"></script>
+
+<script src="assets/js/vendor/popper-1.12.9.min.js"></script>
+
+<script src="assets/js/vendor/bootstrap.min.js"></script>
+
+<script src="assets/js/vendor/owl.carousel.min.js"></script>
+ 
+<script src="assets/js/vendor/jquery.counterup.min.js"></script>
+
+<script src="assets/js/vendor/waypoints-jquery.js"></script>
+
+<script src="assets/js/vendor/lightbox.js"></script>
+
+<script src="assets/js/vendor/jquery.appear.js"></script>
+
+<script src="assets/js/vendor/jquery-ui.min.js"></script>
+
+<script src="assets/js/vendor/wow.min.js"></script>
+
+<script src="assets/js/vendor/plugins.js"></script>
+
+<script src="assets/js/main.js"></script>
 </body>
+
 
 </html>
