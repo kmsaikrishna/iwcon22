@@ -297,7 +297,7 @@
   .footer-area .am {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
-    justify-content: center;
+    justify-content: flex-start;
   }
   .footer-area .offset-1 {
     margin-left: 0;
