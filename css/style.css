@@ -204,6 +204,15 @@ p,
   overflow: hidden;
 }
 
+#card{
+  width: 370px;
+  height: 230px;
+}
+
+#card.text{
+  font-size: 12px !important;
+}
+
 ul,
 li {
   list-style: none;
