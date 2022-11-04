@@ -4516,7 +4516,7 @@ img {
 }
 
 .schedule-tabs .tab-buttons li:nth-child(4n + 2) .day {
-  background-color: #40cbb4;
+  background-color: #ffc20b;
 }
 
 .schedule-tabs .tab-buttons li:nth-child(4n + 3) .day {
@@ -4534,7 +4534,7 @@ img {
 
 .schedule-tabs .tab-buttons li:nth-child(4n + 2) .month,
 .schedule-tabs .tab-buttons li:nth-child(4n + 2) .date {
-  color: #40cbb4;
+  color: #ffc20b;
 }
 
 .schedule-tabs .tab-buttons li:nth-child(4n + 3) .month,
@@ -4553,8 +4553,8 @@ img {
 }
 
 .schedule-tabs .tab-buttons li:nth-child(4n + 2).active-btn {
-  box-shadow: 0 0px 30px rgba(64, 203, 180, 0.3);
-  border: 1px solid #40cbb4;
+  box-shadow: 0 0px 30px rgba(255, 194, 11, 0.3);
+  border: 1px solid #ffc20b;
 }
 
 .schedule-tabs .tab-buttons li:nth-child(4n + 3).active-btn {
