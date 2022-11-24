@@ -186,9 +186,7 @@
                     <li><a href="#sponsors">Sponsors</a></li>
                     <li></li>
                   </ul>
-                  <form>
-                    <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_K8cxPtmUyBH2PC" async> </script>
-                  </form>
+                  <form class="rpay"> </form>
                 </div>
               </nav>
 
@@ -211,9 +209,7 @@
                   <!-- <a href="" class="theme-btn btn-style-one"
                     ><span class="btn-title">Register</span></a
                   > -->
-                  <form>
-                    <!-- <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_K8cxPtmUyBH2PC" async> </script> -->
-                  </form>
+<!-- <form class="rpay"> </form> -->
                 </div>
               </div>
             </div>
@@ -281,9 +277,7 @@
   
 
                 <div class="">
-                  <form>
-                    <!-- <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_K8cxPtmUyBH2PC" async> </script> -->
-                  </form>
+                  <form class="rpay"> </form>
                 </div>
               </div>
             </div>
@@ -318,8 +312,7 @@
                 </ul>
 
                 <div class="">
-                  <form>
-                      <!-- <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_K8cxPtmUyBH2PC" async> </script> -->
+                  <form class="rpay">
                   </form>
                 </div>
               </div>
@@ -378,16 +371,12 @@
       Our speakers from around the world will share the behind-the-scenes of their journey so you can add new amazing skills and mindset shifts to your arsenal.
                     </p>
                   </div>
-                  <form>
-                    <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_K8cxPtmUyBH2PC" async> </script>
-                  </form>
+                  <form class="rpay"> </form>
                 </div>
 
               
                 <div class="">
-                  <form>
-                    <!-- <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_K8cxPtmUyBH2PC" async> </script> -->
-                  </form>
+<!-- <form class="rpay"> </form> -->
                 </div>
               </div>
             </div>
@@ -1585,9 +1574,7 @@
                     </div>
                   </div>
 
-                  <form>
-                    <!-- <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_K8cxPtmUyBH2PC" async> </script> -->
-                  </form>
+<!-- <form class="rpay"> </form> -->
                 </div>
               </div>
 
@@ -1867,7 +1854,7 @@
 
 
                 </div>
-                <form>
+                <form class="rpay">
                   <!-- <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_K8cxPtmUyBH2PC" async> </script> -->
                 </form>                
               </div>
@@ -2271,8 +2258,8 @@
                   </ul>
 
                   <div class="btn-box">
-                    <form>
-                      <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_K8cxPtmUyBH2PC" async> </script>
+                    <form class="rpay">
+                      <!-- <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_K8cxPtmUyBH2PC" async> </script> -->
                     </form>
                   </div>
                 </div>
@@ -2347,8 +2334,8 @@
              </ul>
 
              <div class="btn-box">
-              <form>
-                <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_K8cxPtmUyBH2PC" async> </script>
+              <form class="rpay">
+                <!-- <script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_K8cxPtmUyBH2PC" async> </script> -->
               </form>
                
              </div>
@@ -3111,3 +3098,35 @@
     <script src="js/color-settings.js"></script>
   </body>
 </html>
+<script>
+  async function get_country() {
+    res = await fetch('https://extreme-ip-lookup.com/json/?key=QfloR6iAE3Xc7Z78g2oA')
+    json_data = await res.json();
+    return json_data
+  }
+
+  let country = "";
+  get_country().then(json_data => {
+    if(json_data.country == "India"){
+      button_id = "pl_KjnpYI9ssMpiuc";
+      elem = document.getElementsByClassName("rpay")
+      for (let i = 0; i < elem.length; i++) {
+        s = document.createElement('script');
+      s.setAttribute("src","https://checkout.razorpay.com/v1/payment-button.js");
+      s.setAttribute("data-payment_button_id", button_id);
+        elem[i].appendChild(s)
+      }
+      
+    }
+    else {
+      button_id = "pl_K8cxPtmUyBH2PC";
+      elem = document.getElementsByClassName("rpay")
+      for (let i = 0; i < elem.length; i++) {
+        s = document.createElement('script');
+      s.setAttribute("src","https://checkout.razorpay.com/v1/payment-button.js");
+      s.setAttribute("data-payment_button_id", button_id);
+        elem[i].appendChild(s)
+      }
+    }
+  });
+</script>
