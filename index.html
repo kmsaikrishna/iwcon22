@@ -3100,31 +3100,35 @@
 </html>
 <script>
   async function get_country() {
-    res = await fetch('https://extreme-ip-lookup.com/json/?key=QfloR6iAE3Xc7Z78g2oA')
-    json_data = await res.json();
+    json_data = { "country": "" }
+    try {
+      res = await fetch('https://extreme-ip-lookup.com/json/?key=QfloR6iAE3Xc7Z78g2oA')
+      json_data = await res.json();
+    }
+    catch (err) {
+      //console.log(err)
+    }
     return json_data
   }
-
-  let country = "";
   get_country().then(json_data => {
-    if(json_data.country == "India"){
+    if (json_data.country == "India") {
       button_id = "pl_KjnpYI9ssMpiuc";
       elem = document.getElementsByClassName("rpay")
       for (let i = 0; i < elem.length; i++) {
         s = document.createElement('script');
-      s.setAttribute("src","https://checkout.razorpay.com/v1/payment-button.js");
-      s.setAttribute("data-payment_button_id", button_id);
+        s.setAttribute("src", "https://checkout.razorpay.com/v1/payment-button.js");
+        s.setAttribute("data-payment_button_id", button_id);
         elem[i].appendChild(s)
       }
-      
+
     }
     else {
       button_id = "pl_K8cxPtmUyBH2PC";
       elem = document.getElementsByClassName("rpay")
       for (let i = 0; i < elem.length; i++) {
         s = document.createElement('script');
-      s.setAttribute("src","https://checkout.razorpay.com/v1/payment-button.js");
-      s.setAttribute("data-payment_button_id", button_id);
+        s.setAttribute("src", "https://checkout.razorpay.com/v1/payment-button.js");
+        s.setAttribute("data-payment_button_id", button_id);
         elem[i].appendChild(s)
       }
     }
