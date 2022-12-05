@@ -8238,18 +8238,6 @@ img {
   border-radius: 10px;
 }
 
-.clients-section .new-sponsors-outer h3{
-  display: inline-block;
-  font-size: 20px;
-  line-height: 1.2em;
-  background-color: #ffc20b;
-  color: #ffffff;
-  padding: 10px 30px;
-  font-weight: 700;
-  margin-bottom: 20px;
-  border-radius: 10px;
-}
-
 .clients-section .sponsors-outer:nth-child(3) h3 {
   background-color: #1d95d2;
 }
