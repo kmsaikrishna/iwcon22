@@ -8238,7 +8238,7 @@ img {
   border-radius: 10px;
 }
 
-.time-countdown.clearfix{
+.coming-soon-section .outer-box{
   font-size: 70px; 
   color: white;
 }
@@ -8247,7 +8247,7 @@ img {
   and (min-device-width: 320px) 
   and (max-device-width: 480px)
   and (-webkit-min-device-pixel-ratio: 2) {
-  .time-countdown.clearfix{
+    .coming-soon-section .outer-box{
     font-size: 30px; 
     color: white;
   }
@@ -8258,7 +8258,7 @@ img {
   and (min-device-width: 1024px) 
   and (max-device-width: 1366px)
   and (-webkit-min-device-pixel-ratio: 2) {
-    .time-countdown.clearfix{
+    .coming-soon-section .outer-box{
       font-size: 62px; 
       color: white;
     }
