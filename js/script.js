@@ -370,46 +370,76 @@
     });
   }
 
+  // Timer
+  // Set the date we're counting down to
+var countDownDate = new Date("December 17, 2023 18:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get today's date and time
+  var now = new Date().getTime();
+    
+  // Find the distance between now and the count down date
+  var distance = countDownDate - now;
+    
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 60 * 60 *24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "D: " + hours + "H: "
+  + minutes + "Min: " + seconds + "Sec ";
+    
+  // If the count down is over, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+
   //Event Countdown Timer
-  if ($(".time-countdown").length) {
-    $(".time-countdown").each(function () {
-      var $this = $(this),
-        finalDate = $(this).data("countdown");
-      $this.countdown(finalDate, function (event) {
-        var $this = $(this).html(
-          event.strftime(
-            "" +
-              '<div class="counter-column"><span class="count">%D</span>Days</div> ' +
-              '<div class="counter-column"><span class="count">%H</span>Hours</div>  ' +
-              '<div class="counter-column"><span class="count">%M</span>Minutes</div>  ' +
-              '<div class="counter-column"><span class="count">%S</span>Second</div>'
-          )
-        );
-      });
-    });
-  }
+  // if ($(".time-countdown").length) {
+  //   $(".time-countdown").each(function () {
+  //     var $this = $(this),
+  //       finalDate = $(this).data("countdown");
+  //     $this.countdown(finalDate, function (event) {
+  //       var $this = $(this).html(
+  //         event.strftime(
+  //           "" +
+  //             '<div class="counter-column"><span class="count">%D</span>Days</div> ' +
+  //             '<div class="counter-column"><span class="count">%H</span>Hours</div>  ' +
+  //             '<div class="counter-column"><span class="count">%M</span>Minutes</div>  ' +
+  //             '<div class="counter-column"><span class="count">%S</span>Second</div>'
+  //         )
+  //       );
+  //     });
+  //   });
+  // }
 
-  if ($(".cs-countdown").length) {
-    $(function () {
-      $("[data-countdown]").each(function () {
-        var $this = $(this),
-          finalDate = $(this).data("countdown");
-        $this.countdown(finalDate, function (event) {
-          $this.html(event.strftime("%D days %H:%M:%S"));
-        });
-      });
-    });
+  // if ($(".cs-countdown").length) {
+  //   $(function () {
+  //     $("[data-countdown]").each(function () {
+  //       var $this = $(this),
+  //         finalDate = $(this).data("countdown");
+  //       $this.countdown(finalDate, function (event) {
+  //         $this.html(event.strftime("%D days %H:%M:%S"));
+  //       });
+  //     });
+  //   });
 
-    $(".cs-countdown")
-      .countdown("")
-      .on("update.countdown", function (event) {
-        var $this = $(this).html(
-          event.strftime(
-            "<div><span>%m</span><h6>Months</h6></div> <div><span>%D</span><h6>days</h6></div> <div><span>%H</span><h6>Hours</h6></div> <div><span>%M</span><h6>Minutes</h6></div> <div><span>%S</span><h6>Seconds</h6></div>"
-          )
-        );
-      });
-  }
+  //   $(".cs-countdown")
+  //     .countdown("")
+  //     .on("update.countdown", function (event) {
+  //       var $this = $(this).html(
+  //         event.strftime(
+  //           "<div><span>%m</span><h6>Months</h6></div> <div><span>%D</span><h6>days</h6></div> <div><span>%H</span><h6>Hours</h6></div> <div><span>%M</span><h6>Minutes</h6></div> <div><span>%S</span><h6>Seconds</h6></div>"
+  //         )
+  //       );
+  //     });
+  // }
 
   //LightBox / Fancybox
   if ($(".lightbox-image").length) {
